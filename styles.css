@@ -321,6 +321,13 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
+.game-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
 .game-category {
     background-color: #e76a9b;
     color: white;
@@ -451,6 +458,14 @@ nav ul li a:hover {
     border-radius: 10px;
     object-fit: cover;
     margin-right: 1rem;
+}
+
+.category-game a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
 }
 
 .category-game h3 {
