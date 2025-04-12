@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Knife Flip Online - Online Games</title>
+    <title></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="game-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -36,15 +36,16 @@
         <section class="game-hero">
             <div class="breadcrumbs">
                 <a href="index.html">Home</a> >
-                <a href="#">Adventure</a> >
-                <span>Play Knife Flip Online</span>
+                <a id="categorie" href="#">Adventure</a> >
+                <span id="gameName">Play Knife Flip Online</span>
             </div>
+            
 
-            <h1>Play Knife Flip Online</h1>
+            <h1 id="title"> </h1>
 
             <div class="game-details">
                 <div class="game-image">
-                    <img src="https://ext.same-assets.com/18359409/1943979537.jpeg" alt="Knife Flip Game">
+                    <img id="gameImage" src="" alt="Knife Flip Game">
                 </div>
                 <div class="game-info">
                     <div class="category-badge">Adventure</div>
@@ -61,12 +62,18 @@
                             <i class="fas fa-calendar-alt"></i>
                             <span>Added: January 15, 2024</span>
                         </div>
+                       
                     </div>
-                    <p class="game-description">
+                    <p id="gameDescription" class="game-description">
                         Test your skills in this exciting knife flipping challenge! Flip your knife to hit the target and earn points. With each level, the challenges get tougher, requiring precision and timing. How many points can you score?
                     </p>
+                    
+                    
                     <div class="game-actions">
-                        <button class="play-now-btn">PLAY NOW</button>
+                        <!-- gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html"; -->
+                    <!-- <iframe id="gameIframe" src="" class="hidden"></iframe> -->
+
+                        <button class="play-now-btn" id="playButton">PLAY NOW</button>
                         <div class="social-share">
                             <span>Share: </span>
                             <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
@@ -79,16 +86,19 @@
         </section>
 
         <section class="game-container">
+            <div id="gameContainer">
+            
             <div class="game-frame">
                 <div class="game-loading" id="gameLoading">
                     <div class="spinner"></div>
                     <p>Loading game...</p>
                 </div>
                 <div class="game-placeholder" id="gamePlaceholder">
-                    <img src="https://ext.same-assets.com/18359409/1943979537.jpeg" alt="Knife Flip Game">
-                    <button class="start-game-btn" id="startGameBtn">START GAME</button>
+                    <img  src=" " alt="Knife Flip Game">
+                    <button class="start-game-btn" id="playButton">START GAME</button>
                 </div>
                 <iframe id="gameIframe" style="display: none;" src="about:blank" frameborder="0" allowfullscreen></iframe>
+            </div>
             </div>
 
             <div class="game-instructions">
@@ -98,32 +108,32 @@
                         <div class="instruction-icon"><i class="fas fa-mouse"></i></div>
                         <div class="instruction-text">
                             <h3>Controls</h3>
-                            <p>Click or tap to flip the knife. Time your flips perfectly to hit the target.</p>
+                            <p id="controls"></p>
                         </div>
                     </div>
                     <div class="instruction">
                         <div class="instruction-icon"><i class="fas fa-bullseye"></i></div>
                         <div class="instruction-text">
                             <h3>Objective</h3>
-                            <p>Hit the target with your knife to score points. Each successful hit earns you points and unlocks new knives.</p>
+                            <p id="instruction"></p>
                         </div>
                     </div>
                     <div class="instruction">
                         <div class="instruction-icon"><i class="fas fa-trophy"></i></div>
                         <div class="instruction-text">
                             <h3>Achievements</h3>
-                            <p>Complete challenges to unlock special achievements and unique knife skins.</p>
+                            <p id="achievements"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="ad-section">
+        <!-- <section class="ad-section">
             <div class="ad-banner">
                 <div class="ad-text">AD PLACEMENT</div>
             </div>
-        </section>
+        </section> -->
 
         <section class="similar-games">
             <h2>Similar Games You Might Like</h2>
@@ -298,6 +308,120 @@
         <a href="#" class="social-icon reddit"><i class="fas fa-reddit-alien"></i></a>
         <a href="#" class="social-icon hide-button"><i class="fas fa-chevron-left"></i></a>
     </div>
+    <script>
+        let gameId = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            gameId = urlParams.get('game');
+
+            if (gameId) {
+                updateGameContent(gameId); // Auto start game on page load
+            }
+
+            document.getElementById('playButton').addEventListener('click', function () {
+                startGame(gameId);
+            });
+        });
+
+        function updateGameContent(gameId) {
+            startGame(gameId); // Trigger loading on page load
+        }
+
+        function startGame(gameId) {
+            const gameIframe = document.getElementById('gameIframe');
+            const gameImage=document.getElementById('gameImage');
+            const categorie=document.getElementById('categorie');
+            const gameName=document.getElementById('gameName');
+            const gameDescription=document.getElementById('gameDescription')
+            const title=document.getElementById('title');
+            const controls=document.getElementById('controls');
+            const achievements=document.getElementById('achievements');
+            const instruction=document.getElementById('instruction');
+            const gamePlaceholder = document.getElementById('gamePlaceholder');
+            const gameLoading = document.getElementById('gameLoading');
+
+            gamePlaceholder.style.display = 'none';
+            gameLoading.style.display = 'block';
+            gameIframe.style.display = 'block';
+
+            switch (gameId) {
+                case 'temple':
+                    gameIframe.src ="https://23azostore.github.io/s8/temple-run-2";
+                    gameImage.src="https://m.media-amazon.com/images/I/71UQemxXKdL._SY342_.jpg";
+                    title.innerText="Play TempleRun 2";
+                    categorie.innerText="Adventures";
+                    gameName.innerText="Play Temple Run 2";
+                    gameDescription.innerText="Run for your life in this thrilling endless runner! Dodge obstacles, collect coins, and escape the monster as you explore treacherous cliffs, zip lines, and mines. Play now on mobile or PC – no downloads needed!";
+                    controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Temple Run 2 Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>↑</b> – Jump</li>
+        <li><b>↓</b> – Slide</li>
+        <li><b>←</b> – Turn Left</li>
+        <li><b>→</b> – Turn Right</li>
+        <li><b>Space</b> – Power-Up</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Swipe Up</b> – Jump</li>
+        <li><b>Swipe Down</b> – Slide</li>
+        <li><b>Swipe Left</b> – Turn Left</li>
+        <li><b>Swipe Right</b> – Turn Right</li>
+        <li><b>Tilt</b> – Move Left/Right</li>
+        <li><b>Tap</b> – Power-Up</li>
+      </ul>
+    </div>
+  </div>
+`;
+instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏆 Objectives</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Run as far as possible</b> – The main goal is to keep running and avoid obstacles.</li>
+    <li><b>Collect coins</b> – Gather coins to increase your score and unlock power-ups.</li>
+    <li><b>Complete missions</b> – Finish missions to earn rewards and progress.</li>
+    <li><b>Use power-ups</b> – Activate power-ups to boost your abilities during the run.</li>
+    <li><b>Collect Gems</b> – Collect Gems to unlock new characters and upgrades.</li>
+    <li><b>Jump, Slide, and Dodge</b> – Master the controls to avoid obstacles and keep running.</li>
+  </ul>
+`;
+
+achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>New High Score</b> – Beat your personal best to earn a new title!</li>
+    <li><b>Coin Collector</b> – Collect a set number of coins in a single run.</li>
+    <li><b>Power-Up Master</b> – Use a specific number of power-ups in one run.</li>
+    <li><b>Gem Hunter</b> – Collect all the Gems scattered throughout the game.</li>
+    <li><b>Perfect Run</b> – Complete a run without dying.</li>
+    <li><b>Distance King</b> – Run a specific distance to unlock this achievement.</li>
+  </ul>
+`;
+
+document.title="Temple Run 2";
+
+
+
+
+                
+                    break;
+
+                // Add more games here like:
+                // case 'newgame3':
+                //     gameIframe.src = "https://another-link.com";
+                //     break;
+            }
+
+            gameIframe.onload = function () {
+                gameLoading.style.display = 'none';
+            };
+        }
+    </script>
 
     <script src="script.js"></script>
     <script src="game-script.js"></script>

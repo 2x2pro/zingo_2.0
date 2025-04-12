@@ -302,7 +302,7 @@ nav ul li a:hover {
     display: none;
 }
 
-.game-card {
+.gamecard {
     min-width: 250px;
     background-color: white;
     border-radius: 10px;
@@ -311,17 +311,17 @@ nav ul li a:hover {
     transition: transform 0.3s;
 }
 
-.game-card:hover {
+.gamecard:hover {
     transform: translateY(-5px);
 }
 
-.game-card img {
+.gamecard img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
-.game-card a {
+.gamecard a {
     display: block;
     height: 100%;
     color: inherit;
@@ -338,7 +338,7 @@ nav ul li a:hover {
     margin: 0.5rem;
 }
 
-.game-card h3 {
+.gamecard h3 {
     padding: 0 1rem 1rem;
     font-size: 1rem;
 }

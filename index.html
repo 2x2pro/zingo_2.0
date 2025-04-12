@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Games</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="game-controller-logo.png" type="image/png">
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -89,16 +93,23 @@
                         <div class="game-category">Puzzle &amp; Logic</div>
                         <h3>Play 2048 Online</h3>
                     </div>
-                    <div class="game-card">
-                        <img src="https://ext.same-assets.com/18359409/831569448.jpeg" alt="Ludo Game">
-                        <div class="game-category">Strategy</div>
-                        <h3>Play Ludo With Friends</h3>
+
+                    <div>
+                        <a href="game.html" class="game-card" data-game-id="temple">
+
+                            <img src="https://i.pinimg.com/736x/07/ef/10/07ef10c982b089babd27eb19228264e5.jpg" height="600" width="492" alt="temple-run-2">
+                            <div class="game-category">Strategy</div>
+                            <h3>Play Temple run 2 </h3>
+                        </a>
+
                     </div>
+
+
                     <div class="game-card">
-                        <a href="game.html">
-                            <img src="https://ext.same-assets.com/18359409/1943979537.jpeg" alt="Knife Flip Game">
-                            <div class="game-category">Adventure</div>
-                            <h3>Play Knife Flip Online</h3>
+                        <!-- <a href="game.html"> -->
+                        <img src="https://ext.same-assets.com/18359409/1943979537.jpeg" alt="Knife Flip Game">
+                        <div class="game-category">Adventure</div>
+                        <h3>Play Knife Flip Online</h3>
                         </a>
                     </div>
                     <div class="game-card">
@@ -173,7 +184,7 @@
                     <div class="category-game">
                         <img src="https://ext.same-assets.com/18359409/1943979537.jpeg" alt="Catch-a-pult Game">
                         <h3>Play Catch-a-pult Online</h3>
-                    </div>
+                    </div>3
                     <div class="category-game">
                         <a href="game.html">
                             <img src="https://ext.same-assets.com/18359409/4249135084.jpeg" alt="Knife Flip Game">
@@ -243,7 +254,11 @@
                 </div>
             </div>
             <p class="footer-description">
-                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for online gaming!
+                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun
+                with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated
+                enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of
+                gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for
+                online gaming!
             </p>
         </div>
         <div class="footer-bottom">
@@ -276,7 +291,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        const gameCards = document.querySelectorAll('.game-card');
+        gameCards.forEach(card => {
+            card.addEventListener('click', function (e) {
+                e.preventDefault();
+                const gameId = this.getAttribute('data-game-id');
+                window.location.href = `game.html?game=${gameId}`;
+            });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
+
 </html>
