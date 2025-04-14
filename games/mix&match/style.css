@@ -1,0 +1,581 @@
+body {
+  background: url("img/Halloween_mixmatch.jpeg") no-repeat;
+
+  color: white;
+  background-position: center;
+  font-family: "Creepster", cursive;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* body.halloween {
+} */
+
+body.barbie {
+  background: url("back.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Arial", sans-serif;
+  color: #ff1493;
+}
+
+body.cars {
+  
+  background-color: #4a4a4a;
+  font-family: Arial, sans-serif;
+  
+
+}
+
+body header {
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+/* Default styles (Already defined) */
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  display: none;
+}
+
+body.halloween.theme-selector.Halloween:hover{
+  
+}
+
+#back-button:hover {
+  background-color: #e55a00;
+}
+
+/* Barbie Theme */
+body.barbie #back-button {
+  background-color: #ff69b4;
+}
+
+body.barbie #back-button:hover {
+  background-color: #ff1493;
+}
+
+/* Cars Theme */
+body.cars #back-button {
+  background-color: #FFD700;
+  color: #4a4a4a;
+}
+
+body.cars #back-button:hover {
+  background-color: #FFA500;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {  
+  #back-button {
+      top: 5px;   /* Adjust position */
+      left: 5px;  
+      padding: 7px 11px;  /* Smaller padding */
+      font-size: 14px;  /* Reduce font size */
+      border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {  
+  #back-button {
+      top: 3px;
+      left: 3px;
+      padding: 5px 9px;
+      font-size: 12px;
+      border-radius: 3px;
+  }
+}
+
+
+
+@media screen and (min-width: 37.4375em) {
+  body header {
+    width: 600px;
+  }
+}
+
+body header .timer {
+  position: absolute;
+  top: 14%;
+  left: 90%;
+  font-size: 23px;
+  background: #ffad29;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  border-radius: 4vh;
+  text-align: center;
+}
+
+body.barbie header .timer {
+  background: #ff69b4;
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  body header .timer {
+    top: 10%;
+    left: 85%;
+    font-size: 20px;
+    width: 7vh;
+    height: 7vh;
+    line-height: 7vh;
+    border-radius: 3.5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body header .timer {
+    top: 8%;
+    left: 85%;
+    font-size: 18px;
+    width: 6vh;
+    height: 6vh;
+    line-height: 6vh;
+    border-radius: 3vh;
+  }
+}
+
+@media (max-width: 480px) {
+  body header .timer {
+    top: 5%;
+    left: 85%;
+    font-size: 16px;
+    width: 5vh;
+    height: 5vh;
+    line-height: 5vh;
+    border-radius: 2.5vh;
+  }
+}
+
+
+
+
+/* body.cars header .timer {
+  background: #76101a;
+  color: white;
+} */
+
+.game {
+  height: 90vh;
+  width: 90vw;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 37.4375em) {
+  .game {
+    width: 600px;
+  }
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  height: 22%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 23%;
+  float: left;
+  border-radius: 12px;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  position: relative;
+}
+
+.flipper .front,
+.flipper .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: #ffcca9 0 8px 2px;
+}
+
+.flipper .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  background: #bd5424;
+}
+
+body.barbie .flipper .front {
+  background: #ff69b4;
+}
+
+body.cars .flipper .front {
+  background: #1a3a8a;
+}
+
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid #e8e8e8;
+}
+
+#piggy-bank {
+  background: white url("img/candy.png") no-repeat center;
+  background-size: contain;
+}
+
+#shoe {
+  background: white url("img/spider.png") no-repeat center;
+  background-size: contain;
+}
+
+#plane {
+  background: white url("img/moon.png") no-repeat center;
+  background-size: contain;
+}
+
+#suitcase {
+  background: white url("img/halloween.png") no-repeat center;
+  background-size: contain;
+}
+
+#robot {
+  background: white url("img/gostcandy.svg") no-repeat center;
+  background-size: contain;
+}
+
+#ring {
+  background: white url("img/gost.svg") no-repeat center;
+  background-size: contain;
+}
+
+#palm-tree {
+  background: white url("img/hat.png") no-repeat center;
+  background-size: contain;
+}
+
+#mp3 {
+  background: white url("img/bat.png") no-repeat center;
+  background-size: contain;
+}
+
+#doll {
+  background: white url("so.webp") no-repeat center;
+  background-size: contain;
+}
+
+#dress {
+  background: white url("so2.webp") no-repeat center;
+  background-size: contain;
+}
+
+#shoes {
+  background: white url("so3.webp") no-repeat center;
+  background-size: contain;
+}
+
+#car {
+  background: white url("so4.webp") no-repeat center;
+  background-size: contain;
+}
+
+#ken {
+  background: white url("so5.webp") no-repeat center;
+  background-size: contain;
+}
+
+#pet {
+  background: white url("so6.webp") no-repeat center;
+  background-size: contain;
+}
+
+#accessory {
+  background: white url("so7.webp") no-repeat center;
+  background-size: contain;
+}
+
+#house {
+  background: white url("so8.webp") no-repeat center;
+  background-size: contain;
+}
+#racecar {
+  background: white url("ca1.webp") no-repeat center;
+  background-size: contain;
+}
+
+#tire {
+  background: white url("ca3.png") no-repeat center;
+  background-size: contain;
+}
+
+#flag {
+  background: white url("ca4.png") no-repeat center;
+  background-size: contain;
+}
+
+#helmet {
+  background: white url("ca2.webp") no-repeat center;
+  background-size: contain;
+}
+#trophy {
+  background: white url("caa5.jpg") no-repeat center;
+  background-size: contain;
+}
+#pitstop {
+  background: white url("ca6.jpg") no-repeat center;
+  background-size: contain;
+} 
+#speedometer {
+  background: white url("ca7.jpg") no-repeat center;
+  background-size: contain;
+}
+#steering-wheel{
+  background: white url("ca8.jpg") no-repeat center;
+  background-size: contain;
+}
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.splash-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#splash-img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 0.5s ease-out, transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#splash-img.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#start-button {
+  display: none; /* Initially hidden */
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Creepster", cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+#start-button:hover {
+  background-color: #45a049;
+}
+
+body.barbie #start-button {
+  background-color: #ff69b4;
+  font-family: "Arial", sans-serif;
+}
+
+body.barbie #start-button:hover {
+  background-color: #ff1493;
+}
+
+
+
+#theme-selector button {
+  font-family: "Creepster", cursive; /* Matching font style */
+  background: linear-gradient(45deg, #ff6600, #ff4500); /* Vibrant gradient background */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 25px; /* Rounded edges for a modern look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effects */
+  cursor: pointer;
+}
+
+#theme-selector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+}
+
+#theme-selector button:hover {
+  background: linear-gradient(45deg, #ff4500, #ff6600); /* Invert gradient on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+body.barbie #theme-selector button {
+  background: linear-gradient(45deg, #ff69b4, #ff1493); /* Barbie-themed gradient */
+  color: #fff;
+}
+
+body.barbie #theme-selector button:hover {
+  background: linear-gradient(45deg, #ff1493, #ff69b4);
+}
+
+body.cars #theme-selector button {
+  background: linear-gradient(45deg, #FFD700, #FFA500); /* Cars-themed gradient */
+  color: #4a4a4a;
+}
+
+body.cars #theme-selector button:hover {
+  background: linear-gradient(45deg, #FFA500, #FFD700);
+}
+
+
+
+
+
+
+/* #theme-selector button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+} */
+
+.swal2-popup {
+  font-family: "Creepster", cursive;
+  background-color: #2c2c2c;
+  border: 2px solid #ff6600;
+}
+.swal2-title,
+.swal2-content {
+  color: #ff6600;
+}
+.swal2-confirm {
+  background-color: #ff6600 !important;
+}
+
+body.barbie .swal2-popup {
+  font-family: "Arial", sans-serif;
+  background-color: #fff0f5;
+  border: 2px solid #ff69b4;
+}
+body.barbie .swal2-title,
+body.barbie .swal2-content {
+  color: #ff1493;
+}
+body.barbie .swal2-confirm {
+  background-color: #ff69b4 !important;
+}
+body.cars {
+  background: url("back-6.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #FFD700;
+}
+
+body.cars .swal2-popup {
+  font-family: Arial, sans-serif;
+  background-color: #4a4a4a;
+  border: 2px solid #FFD700;
+}
+body.cars .swal2-title,
+body.cars .swal2-content {
+  color: #FFD700;
+}
+body.cars .swal2-confirm {
+  background-color: #FFD700 !important;
+  color: #4a4a4a;
+}
+
+body.cars #start-button {
+  background-color: #FFD700;
+  font-family: Arial, sans-serif;
+  color: #4a4a4a;
+}
+
+body.cars #start-button:hover {
+  background-color: #FFA500;
+}
+
+
+body.halloween-hover {
+  background-image: url('barbi.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+body.barbie-hover {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+}
+
+body.cars-hover {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+}

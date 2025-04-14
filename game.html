@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="game-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="game-controller-logo.png" type="image/png">
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -39,7 +43,7 @@
                 <a id="categorie" href="#">Adventure</a> >
                 <span id="gameName">Play Knife Flip Online</span>
             </div>
-            
+
 
             <h1 id="title"> </h1>
 
@@ -62,16 +66,18 @@
                             <i class="fas fa-calendar-alt"></i>
                             <span>Added: January 15, 2024</span>
                         </div>
-                       
+
                     </div>
                     <p id="gameDescription" class="game-description">
-                        Test your skills in this exciting knife flipping challenge! Flip your knife to hit the target and earn points. With each level, the challenges get tougher, requiring precision and timing. How many points can you score?
+                        Test your skills in this exciting knife flipping challenge! Flip your knife to hit the target
+                        and earn points. With each level, the challenges get tougher, requiring precision and timing.
+                        How many points can you score?
                     </p>
-                    
-                    
+
+
                     <div class="game-actions">
                         <!-- gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html"; -->
-                    <!-- <iframe id="gameIframe" src="" class="hidden"></iframe> -->
+                        <!-- <iframe id="gameIframe" src="" class="hidden"></iframe> -->
 
                         <button class="play-now-btn" id="playButton">PLAY NOW</button>
                         <div class="social-share">
@@ -87,18 +93,19 @@
 
         <section class="game-container">
             <div id="gameContainer">
-            
-            <div class="game-frame">
-                <div class="game-loading" id="gameLoading">
-                    <div class="spinner"></div>
-                    <p>Loading game...</p>
+
+                <div class="game-frame">
+                    <div class="game-loading" id="gameLoading">
+                        <div class="spinner"></div>
+                        <p>Loading game...</p>
+                    </div>
+                    <div class="game-placeholder" id="gamePlaceholder">
+                        <img src=" " alt="Knife Flip Game">
+                        <button class="start-game-btn" id="playButton">START GAME</button>
+                    </div>
+                    <iframe id="gameIframe" style="display: none;" src="about:blank" frameborder="0"
+                        allowfullscreen></iframe>
                 </div>
-                <div class="game-placeholder" id="gamePlaceholder">
-                    <img  src=" " alt="Knife Flip Game">
-                    <button class="start-game-btn" id="playButton">START GAME</button>
-                </div>
-                <iframe id="gameIframe" style="display: none;" src="about:blank" frameborder="0" allowfullscreen></iframe>
-            </div>
             </div>
 
             <div class="game-instructions">
@@ -189,7 +196,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="review-text">This game is so addictive! I've been playing for hours trying to beat my high score. The graphics are simple but effective, and the gameplay is challenging but fair.</p>
+                        <p class="review-text">This game is so addictive! I've been playing for hours trying to beat my
+                            high score. The graphics are simple but effective, and the gameplay is challenging but fair.
+                        </p>
                         <div class="review-date">Posted on January 20, 2024</div>
                     </div>
                 </div>
@@ -207,7 +216,8 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <p class="review-text">Really fun game to play during short breaks. I like the different knife skins you can unlock. Would be even better with a few more levels.</p>
+                        <p class="review-text">Really fun game to play during short breaks. I like the different knife
+                            skins you can unlock. Would be even better with a few more levels.</p>
                         <div class="review-date">Posted on January 18, 2024</div>
                     </div>
                 </div>
@@ -225,7 +235,9 @@
                             <i class="fas fa-star-half-alt"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <p class="review-text">A decent time-killer with simple controls. The physics feel pretty realistic for a web game. Sometimes it gets a bit repetitive, but overall it's enjoyable.</p>
+                        <p class="review-text">A decent time-killer with simple controls. The physics feel pretty
+                            realistic for a web game. Sometimes it gets a bit repetitive, but overall it's enjoyable.
+                        </p>
                         <div class="review-date">Posted on January 15, 2024</div>
                     </div>
                 </div>
@@ -268,7 +280,11 @@
                 </div>
             </div>
             <p class="footer-description">
-                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for online gaming!
+                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun
+                with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated
+                enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of
+                gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for
+                online gaming!
             </p>
         </div>
         <div class="footer-bottom">
@@ -330,14 +346,14 @@
 
         function startGame(gameId) {
             const gameIframe = document.getElementById('gameIframe');
-            const gameImage=document.getElementById('gameImage');
-            const categorie=document.getElementById('categorie');
-            const gameName=document.getElementById('gameName');
-            const gameDescription=document.getElementById('gameDescription')
-            const title=document.getElementById('title');
-            const controls=document.getElementById('controls');
-            const achievements=document.getElementById('achievements');
-            const instruction=document.getElementById('instruction');
+            const gameImage = document.getElementById('gameImage');
+            const categorie = document.getElementById('categorie');
+            const gameName = document.getElementById('gameName');
+            const gameDescription = document.getElementById('gameDescription')
+            const title = document.getElementById('title');
+            const controls = document.getElementById('controls');
+            const achievements = document.getElementById('achievements');
+            const instruction = document.getElementById('instruction');
             const gamePlaceholder = document.getElementById('gamePlaceholder');
             const gameLoading = document.getElementById('gameLoading');
 
@@ -347,12 +363,12 @@
 
             switch (gameId) {
                 case 'temple':
-                    gameIframe.src ="https://23azostore.github.io/s8/temple-run-2";
-                    gameImage.src="https://m.media-amazon.com/images/I/71UQemxXKdL._SY342_.jpg";
-                    title.innerText="Play TempleRun 2";
-                    categorie.innerText="Adventures";
-                    gameName.innerText="Play Temple Run 2";
-                    gameDescription.innerText="Run for your life in this thrilling endless runner! Dodge obstacles, collect coins, and escape the monster as you explore treacherous cliffs, zip lines, and mines. Play now on mobile or PC – no downloads needed!";
+                    gameIframe.src = "https://23azostore.github.io/s8/temple-run-2";
+                    gameImage.src = "https://m.media-amazon.com/images/I/71UQemxXKdL._SY342_.jpg";
+                    title.innerText = "Play TempleRun 2";
+                    categorie.innerText = "Adventures";
+                    gameName.innerText = "Play Temple Run 2";
+                    gameDescription.innerText = "Run for your life in this thrilling endless runner! Dodge obstacles, collect coins, and escape the monster as you explore treacherous cliffs, zip lines, and mines. Play now on mobile or PC – no downloads needed!";
                     controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Temple Run 2 Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
@@ -379,7 +395,7 @@
     </div>
   </div>
 `;
-instruction.innerHTML = `
+                    instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏆 Objectives</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Run as far as possible</b> – The main goal is to keep running and avoid obstacles.</li>
@@ -391,7 +407,7 @@ instruction.innerHTML = `
   </ul>
 `;
 
-achievements.innerHTML = `
+                    achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>New High Score</b> – Beat your personal best to earn a new title!</li>
@@ -403,19 +419,295 @@ achievements.innerHTML = `
   </ul>
 `;
 
-document.title="Temple Run 2";
+                    document.title = "Temple Run 2";
 
-
-
-
-                
                     break;
 
                 // Add more games here like:
-                // case 'newgame3':
-                //     gameIframe.src = "https://another-link.com";
-                //     break;
+                case 'mix-match':
+                    gameName.innerText = "mix&match";
+                    categorie.innerText = "strategic";
+                    gameIframe.src = "games/mix&match/index.html";
+                    gameImage.src = "games/mix&match/img/halloween.jpg";
+                    title.innerText = "Play mix&match";
+                    gameDescription.innerText = "Mix Match is a fun and fast-paced memory game! Flip over cards to find matching pairs across exciting themes like Barbie, Halloween, and Cars. Test your memory and beat the clock – can you match them all before time runs out? Play now on mobile or PC – no downloads needed!";
+
+                    controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Mix Match Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Mouse Click</b> – Select and flip cards</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Tap</b> – Select and flip cards</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+                    instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Select a Theme</b> – Choose from Barbie, Halloween, or Cars to start.</li>
+    <li><b>Flip the Cards</b> – Click or tap on two cards to reveal them.</li>
+    <li><b>Match Pairs</b> – If the cards match, they stay face up. If not, they flip back over.</li>
+    <li><b>Remember Positions</b> – Use memory skills to remember where each image is.</li>
+    <li><b>Beat the Timer</b> – You have 30 seconds to match all pairs.</li>
+    <li><b>Win or Retry</b> – Match all cards before time runs out to win. Otherwise, try again!</li>
+  </ul>
+`;
+
+                    achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Quick Matcher</b> – Match all pairs with more than 10 seconds remaining.</li>
+    <li><b>Perfect Memory</b> – Complete the game without any wrong matches.</li>
+    <li><b>Theme Master</b> – Win on all three themes: Barbie, Halloween, and Cars.</li>
+    <li><b>Speed Runner</b> – Win in under 20 seconds.</li>
+    <li><b>Persistence Pays</b> – Retry and win after losing at least once.</li>
+  </ul>
+`;
+                    document.title = "Mix & Match";
+
+
+                    break;
+
+                case 'guess':
+                    gameName.innerText = "Guess the Number";
+                    categorie.innerText = "puzzle";
+                    gameIframe.src = "games/random number/index.html";
+                    gameImage.src = "games/random number/guess.jpeg";
+                    title.innerText = "Play Guess the Number";
+                    gameDescription.innerText = "Guess the Number is a simple yet addictive puzzle game where you try to find the secret number! A random number is generated between 1 and the limit you set – can you guess it in the fewest attempts? Sharpen your logic and take the challenge on PC or mobile – no downloads needed!";
+
+                    controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Guess the Number Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Keyboard</b> – Type your guess</li>
+        <li><b>Enter</b> – Submit guess</li>
+        <li><b>Mouse Click</b> – Click buttons and set limit</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Tap</b> – Tap to input your guess</li>
+        <li><b>Keyboard</b> – Use on-screen keyboard to type</li>
+        <li><b>Submit</b> – Tap button to check your guess</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+                    instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Set the Limit</b> – Choose the maximum number (e.g., 50, 100, etc.).</li>
+    <li><b>Start Guessing</b> – The game randomly picks a number between 1 and your max limit.</li>
+    <li><b>Enter Your Guess</b> – Type in a number and submit it.</li>
+    <li><b>Get Feedback</b> – You’ll be told if the secret number is higher or lower.</li>
+    <li><b>Keep Guessing</b> – Use logic to narrow it down.</li>
+    <li><b>Win the Game</b> – Guess the number correctly in the fewest tries possible!</li>
+  </ul>
+`;
+
+                    achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Lucky Shot</b> – Guess the number on your first try!</li>
+    <li><b>Fast Thinker</b> – Guess the number in under 5 attempts.</li>
+    <li><b>Smart Guesser</b> – Win with only 3 wrong guesses or less.</li>
+    <li><b>Number Master</b> – Successfully guess numbers at 3 different difficulty levels.</li>
+    <li><b>Streak Starter</b> – Win 3 games in a row.</li>
+  </ul>
+`;
+
+                    document.title = "Guess the Number";
+                    break;
+
+                case 'subway':
+                    gameName.innerText = "Subway Surfer";
+                    categorie.innerText = "arcade";
+                    gameIframe.src = "https://lnahtml.github.io/a8/subway-surfers-newyork";
+                    gameImage.src = "https://downloadr2.apkmirror.com/wp-content/uploads/2018/11/5bffa628baff0.png";
+                    title.innerText = "Play Subway Surfer";
+                    gameDescription.innerText = "Subway Surfer is a high-speed endless runner where you dodge trains, leap over obstacles, and collect coins while escaping the grumpy inspector and his dog. Set in vibrant cityscapes, it's fast, fun, and perfect for quick play sessions on PC or mobile!";
+
+                    controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Subway Surfer Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Arrow Keys</b> – Move left, right, jump, and slide</li>
+        <li><b>Spacebar</b> – Activate hoverboard (if available)</li>
+        <li><b>Mouse</b> – Navigate UI, pause/resume</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Swipe Left/Right</b> – Move side to side</li>
+        <li><b>Swipe Up</b> – Jump</li>
+        <li><b>Swipe Down</b> – Slide</li>
+        <li><b>Tap</b> – Use hoverboard or power-ups</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+                    instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Start Running</b> – The game begins with your character running on subway tracks.</li>
+    <li><b>Avoid Obstacles</b> – Dodge trains, barriers, and signs by moving, jumping, or sliding.</li>
+    <li><b>Collect Coins</b> – Grab as many coins as you can to buy upgrades and characters.</li>
+    <li><b>Use Power-Ups</b> – Jetpacks, coin magnets, and hoverboards help you go farther.</li>
+    <li><b>Beat Your High Score</b> – Try to run the farthest distance and climb the leaderboard.</li>
+  </ul>
+`;
+
+                    achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Rookie Runner</b> – Reach 10,000 points in one run.</li>
+    <li><b>Coin Collector</b> – Collect 500 coins in one session.</li>
+    <li><b>Speed Demon</b> – Survive past top speed for over 30 seconds.</li>
+    <li><b>Board Rider</b> – Use the hoverboard 5 times in one game.</li>
+    <li><b>Urban Legend</b> – Beat your high score 3 times in a day.</li>
+  </ul>
+`;
+
+                    document.title = "Subway Surfer";
+                    break;
+
+                case 'archer':
+                    gameName.innerText = "Archer Hero";
+                    categorie.innerText = "action";
+                    gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html";
+                    gameImage.src = "https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6";
+                    title.innerText = "Play Archer Hero";
+                    gameDescription.innerText = "Archer Hero is a thrilling action game where precision and quick reflexes are key! Take aim, shoot arrows, and defeat waves of enemies as you progress through challenging levels. With dynamic mechanics and powerful upgrades, prove your archery skills and become the ultimate hero! Play now on PC or mobile – no downloads required.";
+
+                    controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Archer Hero Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Mouse Click & Drag</b> – Aim and shoot arrows</li>
+        <li><b>WASD / Arrow Keys</b> – Move your character</li>
+        <li><b>Spacebar</b> – Use special abilities (if unlocked)</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Touch & Drag</b> – Aim and release to shoot</li>
+        <li><b>On-screen Joystick</b> – Move around</li>
+        <li><b>Tap Buttons</b> – Use power-ups or abilities</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+                    instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Move Carefully</b> – Avoid enemy attacks and find the perfect angle to strike.</li>
+    <li><b>Aim & Shoot</b> – Pull back your bow and release to hit enemies before they hit you.</li>
+    <li><b>Upgrade Gear</b> – Earn coins to improve your damage, range, and abilities.</li>
+    <li><b>Face Bosses</b> – Prepare for epic battles against powerful enemies as you advance.</li>
+    <li><b>Survive & Conquer</b> – Clear levels, collect loot, and become the ultimate archer!</li>
+  </ul>
+`;
+
+                    achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Sharp Shooter</b> – Hit 10 enemies without missing a shot.</li>
+    <li><b>Quick Reflexes</b> – Dodge 20 projectiles in a single level.</li>
+    <li><b>Boss Slayer</b> – Defeat your first boss.</li>
+    <li><b>Level Master</b> – Complete 10 stages without losing a life.</li>
+    <li><b>Legendary Archer</b> – Max out all upgrades.</li>
+  </ul>
+`;
+
+                    document.title = "Archer Hero";
+
+                    // Mini preview (adjusted title to match game, not Fruity Fiesta)
+                    gameminitext.textContent = 'Archer Hero';
+                    gameminiimage.src = 'https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6';
+
+                    break;
+                case 'love':
+                gameName.innerText = "Love Bubbles";
+categorie.innerText = "puzzle";
+gameIframe.src = "https://cdn.htmlgames.com/LoveBubbles/";
+gameImage.src = "lovebubbles200.webp";
+title.innerText = "Play Love Bubbles";
+gameDescription.innerText = "Love Bubbles is a colorful bubble-shooter puzzle game filled with charm and heart! Match and pop bubbles of the same color to clear the board and progress through lovely levels. Whether you're a casual player or a puzzle pro, this sweet and satisfying game is perfect for quick fun on any device.";
+
+controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Love Bubbles Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Mouse Click</b> – Aim and shoot bubbles</li>
+        <li><b>Mouse Move</b> – Control the direction of the shooter</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Tap</b> – Tap where you want to shoot the bubble</li>
+        <li><b>Swipe</b> – Aim more precisely (on some devices)</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Aim the Shooter</b> – Use your mouse or finger to target bubbles of the same color.</li>
+    <li><b>Match 3 or More</b> – Connect 3 or more of the same color to pop them.</li>
+    <li><b>Clear the Board</b> – Keep shooting until you've cleared all the bubbles.</li>
+    <li><b>Use Bank Shots</b> – Bounce off walls for tricky angles.</li>
+    <li><b>Advance Through Levels</b> – Each level gets a little tougher – good luck!</li>
+  </ul>
+`;
+
+achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Bubble Burst</b> – Pop 100 bubbles in one game.</li>
+    <li><b>Chain Reaction</b> – Create a combo that clears multiple rows.</li>
+    <li><b>Perfect Aim</b> – Complete a level without missing a shot.</li>
+    <li><b>Love Wins</b> – Finish all Valentine-themed levels.</li>
+    <li><b>Bubble Master</b> – Reach the highest level with 3 stars.</li>
+  </ul>
+`;
+
+document.title = "Love Bubbles";
+
+// Mini preview setup
+gameminitext.textContent = 'Love Bubbles';
+gameminiimage.src = 'lovebubbles200.webp';
+
+
+
             }
+
 
             gameIframe.onload = function () {
                 gameLoading.style.display = 'none';
@@ -426,4 +718,5 @@ document.title="Temple Run 2";
     <script src="script.js"></script>
     <script src="game-script.js"></script>
 </body>
+
 </html>

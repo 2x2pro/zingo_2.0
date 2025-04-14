@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix & Match Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="halloween">
+    <div id="theme-selector" style="display: none;">
+        <h2>Choose a theme:</h2>
+        <button onclick="selectTheme('halloween')" onmouseover="previewTheme('halloween')" onmouseout="clearPreview()">Halloween</button>
+        <button onclick="selectTheme('barbie')" onmouseover="previewTheme('barbie')" onmouseout="clearPreview()">Barbie</button>
+        <button onclick="selectTheme('cars')" onmouseover="previewTheme('cars')" onmouseout="clearPreview()">Cars</button>
+    </div>
+
+    <header>
+        <div class="timer">30</div>
+    </header>
+
+    <button id="start-button" style="display: none;">Start Game</button>
+    <button id="back-button" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+    </button>
+
+    <div class="game">
+        <!-- Cards will be dynamically added here -->
+    </div>
+
+    <div id="splash-screen">
+        <div class="splash-card">
+            <img id="splash-img" src="img/splash/MMT.png" alt="Mix & Match the Ghost" />
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

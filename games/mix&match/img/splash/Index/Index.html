@@ -1,0 +1,302 @@
+<html>
+<title>Mix & Match the Gost</title>
+<header>
+   <div class="timer">30</div>
+
+</header>
+
+<body>
+   <div class="game">
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+      <div class="flip-container">
+         <div class="flipper">
+            <div class="front"></div>
+            <div class="back"></div>
+         </div>
+      </div>
+   </div>
+   <div id="splash-screen">
+      <div class="splash-card">
+         <img id="splash-img" src="img/splash/SVG1.svg" width="10" />
+      </div>
+   </div>
+</body>
+<style>
+   body {
+
+      background: url("img/Halloween_mixmatch.jpeg") no-repeat;
+      color: white;
+      background-position: center;
+      font-family: arial;
+      background-size: cover;
+   }
+
+   body header {
+      height: 10vh;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+   }
+
+   #splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      z-index: 9999;
+      height: 100%;
+      width: 100%;
+   }
+
+   .splash-card {
+      width: 100%;
+      height: 100%;
+      background: #f8fcb9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   @media screen and (min-width: 37.4375em) {
+      body header {
+         width: 600px;
+      }
+   }
+
+   body header .timer {
+      position: absolute;
+      top: 14%;
+      left: 3%;
+      font-size: 23px;
+      background: #FFAD29;
+      width: 8vh;
+      height: 8vh;
+      line-height: 8vh;
+      border-radius: 4vh;
+      text-align: center;
+   }
+
+   .game {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+   }
+
+   @media screen and (min-width: 37.4375em) {
+      .game {
+         width: 600px;
+      }
+   }
+
+   .flip-container {
+      -webkit-perspective: 1000;
+      -moz-perspective: 1000;
+      perspective: 1000;
+      height: 22%;
+      margin: 1%;
+      cursor: pointer;
+   }
+
+   .flip-container.flip .flipper {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+   }
+
+   .flip-container,
+   .front,
+   .back {
+      width: 23%;
+      float: left;
+      border-radius: 12px;
+   }
+
+   .flipper {
+      -webkit-transition: 0.6s;
+      -moz-transition: 0.6s;
+      transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      height: 100%;
+      position: relative;
+   }
+
+   .flipper .front,
+   .flipper .back {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -ms-backface-visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      box-shadow: #FFCCA9 0 8px 2px;
+   }
+
+   .flipper .front {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      background: #280402;
+   }
+
+   .flipper .back {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      border: 1px solid #E8E8E8;
+   }
+
+   #piggy-bank {
+      background: white url("img/candy.png") no-repeat center;
+      background-size: contain;
+   }
+
+   #shoe {
+      background: white url("img/spider.png") no-repeat center;
+      background-size: contain;
+   }
+
+   #plane {
+      background: white url("img/moon.png") no-repeat center;
+      background-size: contain;
+   }
+
+   #suitcase {
+      background: white url("img/halloween.png") no-repeat center;
+      background-size: contain;
+   }
+
+   #robot {
+      background: white url("img/gostcandy.svg") no-repeat center;
+      background-size: contain;
+   }
+
+   #ring {
+      background: white url("img/gost.svg") no-repeat center;
+      background-size: contain;
+   }
+
+   #palm-tree {
+      background: white url("img/hat.png") no-repeat center;
+      background-size: contain;
+   }
+
+   #mp3 {
+      background: white url("img/bat.png") no-repeat center;
+      background-size: contain;
+   }
+</style>
+
+<script
+   src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script>
+   window.console = window.console || function (t) { };
+</script>
+
+
+<script src='game.js'></script>
+
+</html>

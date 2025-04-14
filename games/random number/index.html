@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">🎯 Guess the Number!</h1>
+
+        <div class="controls">
+            <button id="play-btn" class="primary-btn">Play Game</button>
+            <button id="instruction-btn" class="secondary-btn">How to Play</button>
+        </div>
+
+        <div id="instruction-box" class="instruction-box" style="display: none;">
+            <h2>📋 How to Play:</h2>
+            <ul class="instruction-list">
+                <li>🔢 Enter a maximum number to set the range.</li>
+                <li>🎲 The game will generate a random number within that range.</li>
+                <li>💡 Use the hints to guess: Too High, Too Low, or Correct.</li>
+                <li>⏳ Keep track of your attempts and try to guess in fewer turns.</li>
+                <li>🎉 Have fun and challenge your friends!</li>
+            </ul>
+        </div>
+        
+
+        <div class="game-box" style="display: none;">
+            <input type="number" id="max" placeholder="Enter Max Number" class="input-field">
+            <p id="Hint-txt" class="hint-text">Enter a max number to start the game!</p>
+            <input type="number" id="data" placeholder="Guess the Number" class="input-field" disabled>
+            <p id="info-txt" class="info-text">Hint: </p>
+
+            <div class="button-container">
+                <button id="start-btn" class="primary-btn">Start</button>
+                <button id="guess-btn" class="primary-btn" disabled>Guess</button>
+                <button id="reset-btn" class="secondary-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
