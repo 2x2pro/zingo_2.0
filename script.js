@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+
+    
+
     // Games Slider
     const gamesContainer = document.querySelector('.games-container');
     const prevButton = document.querySelector('.prev-arrow');
