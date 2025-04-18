@@ -2,374 +2,373 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="game-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="game-controller-logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="game-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="game-controller-logo.png" type="image/png">
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="game-controller-logo.png" alt="Logo" class="logo-img">
-            <div class="logo-text">
-                <span>Online</span>
-                <span>Gaming Website</span>
-            </div>
+  <header>
+    <div class="logo-container">
+      <img src="game-controller-logo.png" alt="Logo" class="logo-img">
+      <div class="logo-text">
+        <span>Online</span>
+        <span>Gaming Website</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="game-hero">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> >
+        <a id="categorie" href="#">Adventure</a> >
+        <span id="gameName">Play Knife Flip Online</span>
+      </div>
+
+
+      <h1 id="title"> </h1>
+
+      <div class="game-details">
+        <div class="game-image">
+          <img id="gameImage" src="" alt="Knife Flip Game">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Disclaimer</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
+        <div class="game-info">
+          <div class="category-badge">Adventure</div>
+          <div class="game-stats">
+            <div class="stat">
+              <i class="fas fa-gamepad"></i>
+              <span>Played 1.2K times</span>
+            </div>
+            <div class="stat">
+              <i class="fas fa-star"></i>
+              <span>Rating: 4.5/5</span>
+            </div>
+            <div class="stat">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Added: January 15, 2024</span>
+            </div>
+
+          </div>
+          <p id="gameDescription" class="game-description">
+            Test your skills in this exciting knife flipping challenge! Flip your knife to hit the target
+            and earn points. With each level, the challenges get tougher, requiring precision and timing.
+            How many points can you score?
+          </p>
+
+
+          <div class="game-actions">
+            <!-- gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html"; -->
+            <!-- <iframe id="gameIframe" src="" class="hidden"></iframe> -->
+
+            <button class="play-now-btn" id="playButton">PLAY NOW</button>
+            <div class="social-share">
+              <span>Share: </span>
+              <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="game-hero">
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> >
-                <a id="categorie" href="#">Adventure</a> >
-                <span id="gameName">Play Knife Flip Online</span>
+    <section class="game-container">
+      <div id="gameContainer">
+
+        <div class="game-frame">
+          <div class="game-loading" id="gameLoading">
+            <div class="spinner"></div>
+            <p>Loading game...</p>
+          </div>
+          <div class="game-placeholder" id="gamePlaceholder">
+            <img src=" " alt="Knife Flip Game">
+            <button class="start-game-btn" id="playButton">START GAME</button>
+          </div>
+          <iframe id="gameIframe" style="display: none;" src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="game-instructions">
+        <h2>How to Play</h2>
+        <div class="instruction-container">
+          <div class="instruction">
+            <div class="instruction-icon"><i class="fas fa-mouse"></i></div>
+            <div class="instruction-text">
+              <h3>Controls</h3>
+              <p id="controls"></p>
             </div>
-
-
-            <h1 id="title"> </h1>
-
-            <div class="game-details">
-                <div class="game-image">
-                    <img id="gameImage" src="" alt="Knife Flip Game">
-                </div>
-                <div class="game-info">
-                    <div class="category-badge">Adventure</div>
-                    <div class="game-stats">
-                        <div class="stat">
-                            <i class="fas fa-gamepad"></i>
-                            <span>Played 1.2K times</span>
-                        </div>
-                        <div class="stat">
-                            <i class="fas fa-star"></i>
-                            <span>Rating: 4.5/5</span>
-                        </div>
-                        <div class="stat">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Added: January 15, 2024</span>
-                        </div>
-
-                    </div>
-                    <p id="gameDescription" class="game-description">
-                        Test your skills in this exciting knife flipping challenge! Flip your knife to hit the target
-                        and earn points. With each level, the challenges get tougher, requiring precision and timing.
-                        How many points can you score?
-                    </p>
-
-
-                    <div class="game-actions">
-                        <!-- gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html"; -->
-                        <!-- <iframe id="gameIframe" src="" class="hidden"></iframe> -->
-
-                        <button class="play-now-btn" id="playButton">PLAY NOW</button>
-                        <div class="social-share">
-                            <span>Share: </span>
-                            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="instruction">
+            <div class="instruction-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="instruction-text">
+              <h3>Objective</h3>
+              <p id="instruction"></p>
             </div>
-        </section>
-
-        <section class="game-container">
-            <div id="gameContainer">
-
-                <div class="game-frame">
-                    <div class="game-loading" id="gameLoading">
-                        <div class="spinner"></div>
-                        <p>Loading game...</p>
-                    </div>
-                    <div class="game-placeholder" id="gamePlaceholder">
-                        <img src=" " alt="Knife Flip Game">
-                        <button class="start-game-btn" id="playButton">START GAME</button>
-                    </div>
-                    <iframe id="gameIframe" style="display: none;" src="about:blank" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
+          </div>
+          <div class="instruction">
+            <div class="instruction-icon"><i class="fas fa-trophy"></i></div>
+            <div class="instruction-text">
+              <h3>Achievements</h3>
+              <p id="achievements"></p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="game-instructions">
-                <h2>How to Play</h2>
-                <div class="instruction-container">
-                    <div class="instruction">
-                        <div class="instruction-icon"><i class="fas fa-mouse"></i></div>
-                        <div class="instruction-text">
-                            <h3>Controls</h3>
-                            <p id="controls"></p>
-                        </div>
-                    </div>
-                    <div class="instruction">
-                        <div class="instruction-icon"><i class="fas fa-bullseye"></i></div>
-                        <div class="instruction-text">
-                            <h3>Objective</h3>
-                            <p id="instruction"></p>
-                        </div>
-                    </div>
-                    <div class="instruction">
-                        <div class="instruction-icon"><i class="fas fa-trophy"></i></div>
-                        <div class="instruction-text">
-                            <h3>Achievements</h3>
-                            <p id="achievements"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- <section class="ad-section">
+    <!-- <section class="ad-section">
             <div class="ad-banner">
                 <div class="ad-text">AD PLACEMENT</div>
             </div>
         </section> -->
 
-        <section class="similar-games">
-            <h2>Similar Games You Might Like</h2>
-            <div class="games-grid">
-                <div class="game-card">
-                    <img src="https://ext.same-assets.com/18359409/2372136538.jpeg" alt="Box Crush Game">
-                    <div class="game-category">Puzzle</div>
-                    <h3>Play Box Crush Online</h3>
-                </div>
-                <div class="game-card">
-                    <img src="https://ext.same-assets.com/18359409/4249135084.jpeg" alt="2048 Game">
-                    <div class="game-category">Puzzle</div>
-                    <h3>Play 2048 Online</h3>
-                </div>
-                <div class="game-card">
-                    <img src="https://ext.same-assets.com/18359409/2532758608.jpeg" alt="Juicy Dash Game">
-                    <div class="game-category">Action</div>
-                    <h3>Play Juicy Dash Online</h3>
-                </div>
-                <div class="game-card">
-                    <img src="https://ext.same-assets.com/18359409/3774059589.jpeg" alt="Dunk Shot Game">
-                    <div class="game-category">Sports</div>
-                    <h3>Play Dunk Shot Online</h3>
-                </div>
+    <section class="similar-games">
+      <h2>Similar Games You Might Like</h2>
+      <div class="games-grid">
+        <div class="game-card">
+          <img src="https://ext.same-assets.com/18359409/2372136538.jpeg" alt="Box Crush Game">
+          <div class="game-category">Puzzle</div>
+          <h3>Play Box Crush Online</h3>
+        </div>
+        <div class="game-card">
+          <img src="https://ext.same-assets.com/18359409/4249135084.jpeg" alt="2048 Game">
+          <div class="game-category">Puzzle</div>
+          <h3>Play 2048 Online</h3>
+        </div>
+        <div class="game-card">
+          <img src="https://ext.same-assets.com/18359409/2532758608.jpeg" alt="Juicy Dash Game">
+          <div class="game-category">Action</div>
+          <h3>Play Juicy Dash Online</h3>
+        </div>
+        <div class="game-card">
+          <img src="https://ext.same-assets.com/18359409/3774059589.jpeg" alt="Dunk Shot Game">
+          <div class="game-category">Sports</div>
+          <h3>Play Dunk Shot Online</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-reviews">
+      <h2>Player Reviews</h2>
+      <div class="overall-rating">
+        <div class="rating-number">4.5</div>
+        <div class="rating-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="rating-count">Based on 128 reviews</div>
+      </div>
+
+      <div class="review-list">
+        <div class="review-item">
+          <div class="reviewer">
+            <div class="avatar">JD</div>
+            <div class="name">John Doe</div>
+          </div>
+          <div class="review-content">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-        </section>
-
-        <section class="game-reviews">
-            <h2>Player Reviews</h2>
-            <div class="overall-rating">
-                <div class="rating-number">4.5</div>
-                <div class="rating-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="rating-count">Based on 128 reviews</div>
-            </div>
-
-            <div class="review-list">
-                <div class="review-item">
-                    <div class="reviewer">
-                        <div class="avatar">JD</div>
-                        <div class="name">John Doe</div>
-                    </div>
-                    <div class="review-content">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="review-text">This game is so addictive! I've been playing for hours trying to beat my
-                            high score. The graphics are simple but effective, and the gameplay is challenging but fair.
-                        </p>
-                        <div class="review-date">Posted on January 20, 2024</div>
-                    </div>
-                </div>
-
-                <div class="review-item">
-                    <div class="reviewer">
-                        <div class="avatar">AS</div>
-                        <div class="name">Amanda Smith</div>
-                    </div>
-                    <div class="review-content">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p class="review-text">Really fun game to play during short breaks. I like the different knife
-                            skins you can unlock. Would be even better with a few more levels.</p>
-                        <div class="review-date">Posted on January 18, 2024</div>
-                    </div>
-                </div>
-
-                <div class="review-item">
-                    <div class="reviewer">
-                        <div class="avatar">MJ</div>
-                        <div class="name">Mike Johnson</div>
-                    </div>
-                    <div class="review-content">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p class="review-text">A decent time-killer with simple controls. The physics feel pretty
-                            realistic for a web game. Sometimes it gets a bit repetitive, but overall it's enjoyable.
-                        </p>
-                        <div class="review-date">Posted on January 15, 2024</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="write-review">
-                <h3>Write Your Review</h3>
-                <form id="reviewForm">
-                    <div class="form-group">
-                        <label for="reviewName">Your Name</label>
-                        <input type="text" id="reviewName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reviewRating">Your Rating</label>
-                        <div class="rating-select">
-                            <i class="far fa-star" data-rating="1"></i>
-                            <i class="far fa-star" data-rating="2"></i>
-                            <i class="far fa-star" data-rating="3"></i>
-                            <i class="far fa-star" data-rating="4"></i>
-                            <i class="far fa-star" data-rating="5"></i>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="reviewText">Your Review</label>
-                        <textarea id="reviewText" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-review-btn">Submit Review</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="game-controller-logo.png" alt="Logo" class="logo-img">
-                <div class="logo-text">
-                    <span>Online</span>
-                    <span>Gaming Website</span>
-                </div>
-            </div>
-            <p class="footer-description">
-                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun
-                with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated
-                enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of
-                gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for
-                online gaming!
+            <p class="review-text">This game is so addictive! I've been playing for hours trying to beat my
+              high score. The graphics are simple but effective, and the gameplay is challenging but fair.
             </p>
+            <div class="review-date">Posted on January 20, 2024</div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-category">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Strategy</a></li>
-                    <li><a href="#">Puzzle & Logic</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h3>Other Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Follow On</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <div class="social-sidebar">
-        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon reddit"><i class="fas fa-reddit-alien"></i></a>
-        <a href="#" class="social-icon hide-button"><i class="fas fa-chevron-left"></i></a>
+        <div class="review-item">
+          <div class="reviewer">
+            <div class="avatar">AS</div>
+            <div class="name">Amanda Smith</div>
+          </div>
+          <div class="review-content">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">Really fun game to play during short breaks. I like the different knife
+              skins you can unlock. Would be even better with a few more levels.</p>
+            <div class="review-date">Posted on January 18, 2024</div>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="reviewer">
+            <div class="avatar">MJ</div>
+            <div class="name">Mike Johnson</div>
+          </div>
+          <div class="review-content">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">A decent time-killer with simple controls. The physics feel pretty
+              realistic for a web game. Sometimes it gets a bit repetitive, but overall it's enjoyable.
+            </p>
+            <div class="review-date">Posted on January 15, 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="write-review">
+        <h3>Write Your Review</h3>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label for="reviewName">Your Name</label>
+            <input type="text" id="reviewName" required>
+          </div>
+          <div class="form-group">
+            <label for="reviewRating">Your Rating</label>
+            <div class="rating-select">
+              <i class="far fa-star" data-rating="1"></i>
+              <i class="far fa-star" data-rating="2"></i>
+              <i class="far fa-star" data-rating="3"></i>
+              <i class="far fa-star" data-rating="4"></i>
+              <i class="far fa-star" data-rating="5"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reviewText">Your Review</label>
+            <textarea id="reviewText" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="submit-review-btn">Submit Review</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="game-controller-logo.png" alt="Logo" class="logo-img">
+        <div class="logo-text">
+          <span>Online</span>
+          <span>Gaming Website</span>
+        </div>
+      </div>
+      <p class="footer-description">
+        Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun
+        with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated
+        enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of
+        gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for
+        online gaming!
+      </p>
     </div>
-    <script>
-        let gameId = null;
+    <div class="footer-bottom">
+      <div class="footer-category">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Adventure</a></li>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Strategy</a></li>
+          <li><a href="#">Puzzle & Logic</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Other Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow On</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            gameId = urlParams.get('game');
+  <div class="social-sidebar">
+    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon reddit"><i class="fas fa-reddit-alien"></i></a>
+    <a href="#" class="social-icon hide-button"><i class="fas fa-chevron-left"></i></a>
+  </div>
+  <script>
+    let gameId = null;
 
-            if (gameId) {
-                updateGameContent(gameId); // Auto start game on page load
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      gameId = urlParams.get('game');
 
-            document.getElementById('playButton').addEventListener('click', function () {
-                startGame(gameId);
-            });
-        });
+      if (gameId) {
+        updateGameContent(gameId); // Auto start game on page load
+      }
 
-        function updateGameContent(gameId) {
-            startGame(gameId); // Trigger loading on page load
-        }
+      document.getElementById('playButton').addEventListener('click', function () {
+        startGame(gameId);
+      });
+    });
 
-        function startGame(gameId) {
-            const gameIframe = document.getElementById('gameIframe');
-            const gameImage = document.getElementById('gameImage');
-            const categorie = document.getElementById('categorie');
-            const gameName = document.getElementById('gameName');
-            const gameDescription = document.getElementById('gameDescription')
-            const title = document.getElementById('title');
-            const controls = document.getElementById('controls');
-            const achievements = document.getElementById('achievements');
-            const instruction = document.getElementById('instruction');
-            const gamePlaceholder = document.getElementById('gamePlaceholder');
-            const gameLoading = document.getElementById('gameLoading');
+    function updateGameContent(gameId) {
+      startGame(gameId); // Trigger loading on page load
+    }
 
-            gamePlaceholder.style.display = 'none';
-            gameLoading.style.display = 'block';
-            gameIframe.style.display = 'block';
+    function startGame(gameId) {
+      const gameIframe = document.getElementById('gameIframe');
+      const gameImage = document.getElementById('gameImage');
+      const categorie = document.getElementById('categorie');
+      const gameName = document.getElementById('gameName');
+      const gameDescription = document.getElementById('gameDescription')
+      const title = document.getElementById('title');
+      const controls = document.getElementById('controls');
+      const achievements = document.getElementById('achievements');
+      const instruction = document.getElementById('instruction');
+      const gamePlaceholder = document.getElementById('gamePlaceholder');
+      const gameLoading = document.getElementById('gameLoading');
 
-            switch (gameId) {
-                case 'temple':
-                    gameIframe.src = "https://23azostore.github.io/s8/temple-run-2";
-                    gameImage.src = "https://m.media-amazon.com/images/I/71UQemxXKdL._SY342_.jpg";
-                    title.innerText = "Play TempleRun 2";
-                    categorie.innerText = "Adventures";
-                    gameName.innerText = "Play Temple Run 2";
-                    gameDescription.innerText = "Run for your life in this thrilling endless runner! Dodge obstacles, collect coins, and escape the monster as you explore treacherous cliffs, zip lines, and mines. Play now on mobile or PC – no downloads needed!";
-                    controls.innerHTML = `
+      gamePlaceholder.style.display = 'none';
+      gameLoading.style.display = 'block';
+      gameIframe.style.display = 'block';
+
+      switch (gameId) {
+        case 'temple':
+          gameIframe.src = "https://23azostore.github.io/s8/temple-run-2";
+          gameImage.src = "https://m.media-amazon.com/images/I/71UQemxXKdL._SY342_.jpg";
+          title.innerText = "Play TempleRun 2";
+          categorie.innerText = "Adventures";
+          gameName.innerText = "Play Temple Run 2";
+          gameDescription.innerText = "Run for your life in this thrilling endless runner! Dodge obstacles, collect coins, and escape the monster as you explore treacherous cliffs, zip lines, and mines. Play now on mobile or PC – no downloads needed!";
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Temple Run 2 Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -395,7 +394,7 @@
     </div>
   </div>
 `;
-                    instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏆 Objectives</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Run as far as possible</b> – The main goal is to keep running and avoid obstacles.</li>
@@ -407,7 +406,7 @@
   </ul>
 `;
 
-                    achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>New High Score</b> – Beat your personal best to earn a new title!</li>
@@ -419,20 +418,20 @@
   </ul>
 `;
 
-                    document.title = "Temple Run 2";
+          document.title = "Temple Run 2";
 
-                    break;
+          break;
 
-                // Add more games here like:
-                case 'mix-match':
-                    gameName.innerText = "mix&match";
-                    categorie.innerText = "strategic";
-                    gameIframe.src = "games/mix&match/index.html";
-                    gameImage.src = "games/mix&match/img/halloween.jpg";
-                    title.innerText = "Play mix&match";
-                    gameDescription.innerText = "Mix Match is a fun and fast-paced memory game! Flip over cards to find matching pairs across exciting themes like Barbie, Halloween, and Cars. Test your memory and beat the clock – can you match them all before time runs out? Play now on mobile or PC – no downloads needed!";
+        // Add more games here like:
+        case 'mix-match':
+          gameName.innerText = "mix&match";
+          categorie.innerText = "strategic";
+          gameIframe.src = "games/mix&match/index.html";
+          gameImage.src = "games/mix&match/img/halloween.jpg";
+          title.innerText = "Play mix&match";
+          gameDescription.innerText = "Mix Match is a fun and fast-paced memory game! Flip over cards to find matching pairs across exciting themes like Barbie, Halloween, and Cars. Test your memory and beat the clock – can you match them all before time runs out? Play now on mobile or PC – no downloads needed!";
 
-                    controls.innerHTML = `
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Mix Match Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -450,7 +449,7 @@
   </div>
 `;
 
-                    instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Select a Theme</b> – Choose from Barbie, Halloween, or Cars to start.</li>
@@ -462,7 +461,7 @@
   </ul>
 `;
 
-                    achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Quick Matcher</b> – Match all pairs with more than 10 seconds remaining.</li>
@@ -472,20 +471,20 @@
     <li><b>Persistence Pays</b> – Retry and win after losing at least once.</li>
   </ul>
 `;
-                    document.title = "Mix & Match";
+          document.title = "Mix & Match";
 
 
-                    break;
+          break;
 
-                case 'guess':
-                    gameName.innerText = "Guess the Number";
-                    categorie.innerText = "puzzle";
-                    gameIframe.src = "games/random number/index.html";
-                    gameImage.src = "games/random number/guess.jpeg";
-                    title.innerText = "Play Guess the Number";
-                    gameDescription.innerText = "Guess the Number is a simple yet addictive puzzle game where you try to find the secret number! A random number is generated between 1 and the limit you set – can you guess it in the fewest attempts? Sharpen your logic and take the challenge on PC or mobile – no downloads needed!";
+        case 'guess':
+          gameName.innerText = "Guess the Number";
+          categorie.innerText = "puzzle";
+          gameIframe.src = "games/random number/index.html";
+          gameImage.src = "games/random number/guess.jpeg";
+          title.innerText = "Play Guess the Number";
+          gameDescription.innerText = "Guess the Number is a simple yet addictive puzzle game where you try to find the secret number! A random number is generated between 1 and the limit you set – can you guess it in the fewest attempts? Sharpen your logic and take the challenge on PC or mobile – no downloads needed!";
 
-                    controls.innerHTML = `
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Guess the Number Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -507,7 +506,7 @@
   </div>
 `;
 
-                    instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Set the Limit</b> – Choose the maximum number (e.g., 50, 100, etc.).</li>
@@ -519,7 +518,7 @@
   </ul>
 `;
 
-                    achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Lucky Shot</b> – Guess the number on your first try!</li>
@@ -530,18 +529,18 @@
   </ul>
 `;
 
-                    document.title = "Guess the Number";
-                    break;
+          document.title = "Guess the Number";
+          break;
 
-                case 'subway':
-                    gameName.innerText = "Subway Surfer";
-                    categorie.innerText = "arcade";
-                    gameIframe.src = "https://lnahtml.github.io/a8/subway-surfers-newyork";
-                    gameImage.src = "https://downloadr2.apkmirror.com/wp-content/uploads/2018/11/5bffa628baff0.png";
-                    title.innerText = "Play Subway Surfer";
-                    gameDescription.innerText = "Subway Surfer is a high-speed endless runner where you dodge trains, leap over obstacles, and collect coins while escaping the grumpy inspector and his dog. Set in vibrant cityscapes, it's fast, fun, and perfect for quick play sessions on PC or mobile!";
+        case 'subway':
+          gameName.innerText = "Subway Surfer";
+          categorie.innerText = "arcade";
+          gameIframe.src = "https://lnahtml.github.io/a8/subway-surfers-newyork";
+          gameImage.src = "https://downloadr2.apkmirror.com/wp-content/uploads/2018/11/5bffa628baff0.png";
+          title.innerText = "Play Subway Surfer";
+          gameDescription.innerText = "Subway Surfer is a high-speed endless runner where you dodge trains, leap over obstacles, and collect coins while escaping the grumpy inspector and his dog. Set in vibrant cityscapes, it's fast, fun, and perfect for quick play sessions on PC or mobile!";
 
-                    controls.innerHTML = `
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Subway Surfer Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -564,7 +563,7 @@
   </div>
 `;
 
-                    instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Start Running</b> – The game begins with your character running on subway tracks.</li>
@@ -575,7 +574,7 @@
   </ul>
 `;
 
-                    achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Rookie Runner</b> – Reach 10,000 points in one run.</li>
@@ -586,18 +585,18 @@
   </ul>
 `;
 
-                    document.title = "Subway Surfer";
-                    break;
+          document.title = "Subway Surfer";
+          break;
 
-                case 'archer':
-                    gameName.innerText = "Archer Hero";
-                    categorie.innerText = "action";
-                    gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html";
-                    gameImage.src = "https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6";
-                    title.innerText = "Play Archer Hero";
-                    gameDescription.innerText = "Archer Hero is a thrilling action game where precision and quick reflexes are key! Take aim, shoot arrows, and defeat waves of enemies as you progress through challenging levels. With dynamic mechanics and powerful upgrades, prove your archery skills and become the ultimate hero! Play now on PC or mobile – no downloads required.";
+        case 'archer':
+          gameName.innerText = "Archer Hero";
+          categorie.innerText = "action";
+          gameIframe.src = "https://www.onlinegames.io/games/2023/unity/archer-hero/index.html";
+          gameImage.src = "https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6";
+          title.innerText = "Play Archer Hero";
+          gameDescription.innerText = "Archer Hero is a thrilling action game where precision and quick reflexes are key! Take aim, shoot arrows, and defeat waves of enemies as you progress through challenging levels. With dynamic mechanics and powerful upgrades, prove your archery skills and become the ultimate hero! Play now on PC or mobile – no downloads required.";
 
-                    controls.innerHTML = `
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Archer Hero Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -619,7 +618,7 @@
   </div>
 `;
 
-                    instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Move Carefully</b> – Avoid enemy attacks and find the perfect angle to strike.</li>
@@ -630,7 +629,7 @@
   </ul>
 `;
 
-                    achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Sharp Shooter</b> – Hit 10 enemies without missing a shot.</li>
@@ -641,22 +640,22 @@
   </ul>
 `;
 
-                    document.title = "Archer Hero";
+          document.title = "Archer Hero";
 
-                    // Mini preview (adjusted title to match game, not Fruity Fiesta)
-                    gameminitext.textContent = 'Archer Hero';
-                    gameminiimage.src = 'https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6';
+          // Mini preview (adjusted title to match game, not Fruity Fiesta)
+          gameminitext.textContent = 'Archer Hero';
+          gameminiimage.src = 'https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6';
 
-                    break;
-                case 'love':
-                gameName.innerText = "Love Bubbles";
-categorie.innerText = "puzzle";
-gameIframe.src = "https://cdn.htmlgames.com/LoveBubbles/";
-gameImage.src = "lovebubbles200.webp";
-title.innerText = "Play Love Bubbles";
-gameDescription.innerText = "Love Bubbles is a colorful bubble-shooter puzzle game filled with charm and heart! Match and pop bubbles of the same color to clear the board and progress through lovely levels. Whether you're a casual player or a puzzle pro, this sweet and satisfying game is perfect for quick fun on any device.";
+          break;
+        case 'love':
+          gameName.innerText = "Love Bubbles";
+          categorie.innerText = "puzzle";
+          gameIframe.src = "https://cdn.htmlgames.com/LoveBubbles/";
+          gameImage.src = "lovebubbles200.webp";
+          title.innerText = "Play Love Bubbles";
+          gameDescription.innerText = "Love Bubbles is a colorful bubble-shooter puzzle game filled with charm and heart! Match and pop bubbles of the same color to clear the board and progress through lovely levels. Whether you're a casual player or a puzzle pro, this sweet and satisfying game is perfect for quick fun on any device.";
 
-controls.innerHTML = `
+          controls.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Love Bubbles Controls</h3>
   <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
     <div>
@@ -676,7 +675,7 @@ controls.innerHTML = `
   </div>
 `;
 
-instruction.innerHTML = `
+          instruction.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Aim the Shooter</b> – Use your mouse or finger to target bubbles of the same color.</li>
@@ -687,7 +686,7 @@ instruction.innerHTML = `
   </ul>
 `;
 
-achievements.innerHTML = `
+          achievements.innerHTML = `
   <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
   <ul style="list-style:none; padding:0; font-family:sans-serif;">
     <li><b>Bubble Burst</b> – Pop 100 bubbles in one game.</li>
@@ -698,25 +697,213 @@ achievements.innerHTML = `
   </ul>
 `;
 
-document.title = "Love Bubbles";
+          document.title = "Love Bubbles";
 
-// Mini preview setup
-gameminitext.textContent = 'Love Bubbles';
-gameminiimage.src = 'lovebubbles200.webp';
+          break;
+
+        case 'angrybird':
+          gameName.innerText = "Angry Birds";
+          categorie.innerText = "Adventure";
+          gameIframe.src = "https://narrow-one.github.io/n88/angry-birds/"; // Example iframe URL (you can update if needed)
+          gameImage.src = "images.jpeg"; // Classic Angry Birds icon
+          title.innerText = "Play Angry Birds";
+          gameDescription.innerText = "Angry Birds is a physics-based puzzle game where you launch colorful birds with unique abilities to destroy the pigs' defenses! Strategically aim, adjust your angle, and bring down towers in this addictive, hilarious challenge. Play now on PC or mobile – slingshot your way to victory!";
+
+          controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Angry Birds Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Mouse Click & Drag</b> – Aim the slingshot and release to launch</li>
+        <li><b>Mouse Move</b> – Adjust angle and power</li>
+        <li><b>R Key</b> – Restart level</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Touch & Drag</b> – Pull back the slingshot to aim</li>
+        <li><b>Release Touch</b> – Fire the bird</li>
+        <li><b>Tap Bird (Mid-Air)</b> – Activate special ability (if available)</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+          instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Launch Birds</b> – Use the slingshot to fling birds toward pig fortresses.</li>
+    <li><b>Target Weak Points</b> – Aim for structural flaws to topple towers more easily.</li>
+    <li><b>Use Bird Abilities</b> – Tap during flight to trigger special powers like splitting or speed boosts.</li>
+    <li><b>Maximize Damage</b> – Destroy pigs and structures with as few birds as possible to score high.</li>
+    <li><b>Advance Through Levels</b> – Each level offers new layouts, challenges, and tougher pigs!</li>
+  </ul>
+`;
+
+          achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>First Strike</b> – Knock out all pigs with the first bird.</li>
+    <li><b>Sharp Shooter</b> – Hit three structures in one shot.</li>
+    <li><b>Ability Master</b> – Use every bird's special ability perfectly.</li>
+    <li><b>Three Star Wonder</b> – Earn 3 stars in 10 levels.</li>
+    <li><b>Destruction King</b> – Achieve 90% destruction across all structures in a level.</li>
+  </ul>
+`;
+
+          document.title = "Angry Birds";
+
+          // Mini preview (optional, if you use it)
+          gameminitext.textContent = 'Angry Birds';
+          gameminiimage.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Angry_Birds_app_icon.png/220px-Angry_Birds_app_icon.png';
+
+          break;
+
+        case 'amongus':
+          gameName.innerText = "Among Us";
+          categorie.innerText = "multiplayer";
+          gameIframe.src = "https://ovo-game.github.io/o/among-us";
+          gameImage.src = "https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg";
+          title.innerText = "Play Among Us";
+          gameDescription.innerText = "Among Us is a thrilling online multiplayer game of teamwork and betrayal. Work with your crew to complete tasks on a spaceship—but beware! One or more impostors are lurking, trying to sabotage and eliminate everyone. Use your deduction skills, hold emergency meetings, and vote wisely. Will you survive or deceive? Play now on PC or mobile!";
+
+          controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Among Us Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>WASD / Arrow Keys</b> – Move your character</li>
+        <li><b>Mouse Click</b> – Interact with tasks, buttons, or sabotage</li>
+        <li><b>Spacebar / E</b> – Use/interact with nearby objects</li>
+        <li><b>R</b> – Report body</li>
+        <li><b>Tab</b> – View map</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Joystick</b> – Move your crewmate</li>
+        <li><b>Tap Icons</b> – Complete tasks or sabotage (as impostor)</li>
+        <li><b>Report / Kill Buttons</b> – Use abilities depending on role</li>
+        <li><b>Map Button</b> – Navigate around the ship</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+          instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Join a Game</b> – Play online or locally with friends or strangers.</li>
+    <li><b>Complete Tasks</b> – As a crewmate, finish tasks to help your team win.</li>
+    <li><b>Find the Impostor</b> – Watch for suspicious behavior and report dead bodies.</li>
+    <li><b>Sabotage & Eliminate</b> – As an impostor, blend in, sabotage, and eliminate crewmates secretly.</li>
+    <li><b>Vote to Survive</b> – Use emergency meetings and voting to eject impostors—or innocent crewmates by mistake!</li>
+  </ul>
+`;
+
+          achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Task Master</b> – Complete all your tasks in a game.</li>
+    <li><b>Silent Assassin</b> – Win as an impostor without getting caught.</li>
+    <li><b>Big Brain</b> – Correctly vote out the impostor on the first try.</li>
+    <li><b>Survivor</b> – Be the last crewmate standing.</li>
+    <li><b>Saboteur Supreme</b> – Win by sabotage without killing anyone.</li>
+  </ul>
+`;
+
+          document.title = "Among Us";
+
+          // Mini preview
+          gameminitext.textContent = 'Among Us';
+          gameminiimage.src = 'https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg';
+
+          break;
+
+        case 'candycrush':
+          gameName.innerText = "Candy Crush";
+          categorie.innerText = "puzzle";
+          gameIframe.src = "https://q10games.com/Candy_Crush/candy-crush/index.html";
+          gameImage.src = "Candy.png";
+          title.innerText = "Play Candy Crush";
+          gameDescription.innerText = "Candy Crush is a colorful match-3 puzzle game where you swap candies to create chains of three or more of the same color. With sweet combos, exploding boosters, and hundreds of levels, it's a delicious challenge that keeps you coming back for more. Play now on PC or mobile and crush your way to victory!";
+
+          controls.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Candy Crush Controls</h3>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+    <div>
+      <h4 style="color:#0099cc;">🖥️ PC</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Mouse Click & Drag</b> – Swap two adjacent candies</li>
+        <li><b>Click</b> – Select and move candies</li>
+        <li><b>Esc</b> – Pause the game</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#33cc33;">📱 Mobile</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><b>Touch & Swipe</b> – Swap candies on the board</li>
+        <li><b>Tap</b> – Select candies and interact with menus</li>
+        <li><b>Tap Power-ups</b> – Use boosters strategically</li>
+      </ul>
+    </div>
+  </div>
+`;
+
+          instruction.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Match 3 or More</b> – Swap candies to line up at least 3 of the same color.</li>
+    <li><b>Clear Goals</b> – Complete objectives like removing jelly, collecting ingredients, or reaching a score.</li>
+    <li><b>Create Special Candies</b> – Match 4 or more to create striped, wrapped, or color bomb candies.</li>
+    <li><b>Use Boosters</b> – Unlock powerful tools to help you beat tough levels.</li>
+    <li><b>Progress Through Levels</b> – Each stage adds new challenges and candy combinations!</li>
+  </ul>
+`;
+
+          achievements.innerHTML = `
+  <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+  <ul style="list-style:none; padding:0; font-family:sans-serif;">
+    <li><b>Sweet Start</b> – Complete your first level.</li>
+    <li><b>Combo King</b> – Create a combo with a striped and wrapped candy.</li>
+    <li><b>Explosive Expert</b> – Use 3 color bombs in one game.</li>
+    <li><b>Perfect Score</b> – Get 3 stars on a level.</li>
+    <li><b>Sugar Rush</b> – Beat 5 levels in a row without losing a life.</li>
+  </ul>
+`;
+
+          document.title = "Candy Crush";
+
+          // Mini preview
+          gameminitext.textContent = 'Candy Crush';
+          gameminiimage.src = 'https://upload.wikimedia.org/wikipedia/en/0/09/Candy_Crush_Saga_Logo.png';
+
+          break;
 
 
 
-            }
 
 
-            gameIframe.onload = function () {
-                gameLoading.style.display = 'none';
-            };
-        }
-    </script>
 
-    <script src="script.js"></script>
-    <script src="game-script.js"></script>
+
+
+
+
+      }
+
+
+      gameIframe.onload = function () {
+        gameLoading.style.display = 'none';
+      };
+    }
+  </script>
+
+  <script src="script.js"></script>
+  <script src="game-script.js"></script>
 </body>
 
 </html>
