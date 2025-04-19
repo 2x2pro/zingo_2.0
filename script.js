@@ -166,12 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle category card clicks
     const categoryCards = document.querySelectorAll('.category-card');
 
-    categoryCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            const categoryName = this.querySelector('h3').innerText;
-            alert('Viewing ' + categoryName + ' games');
-            // In a real implementation, this would filter games by category
-        });
+    // categoryCards.forEach(card => {
+    //     card.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const categoryName = this.querySelector('h3').innerText;
+    //         alert('Viewing ' + categoryName + ' games');
+    //         // In a real implementation, this would filter games by category
+    //     });
     });
 });
