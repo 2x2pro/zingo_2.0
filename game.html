@@ -17,7 +17,35 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="game-controller-logo.png" alt="Logo" class="logo-img">
+      <div class=".logo-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 360 100">
+          <!-- Game Controller Icon -->
+          <g>
+            <ellipse cx="50" cy="50" rx="32" ry="32" fill="url(#grad1)" />
+            <rect x="31" y="40" width="38" height="18" rx="9" fill="#fbf4f4" stroke="#e995b6" stroke-width="2" />
+            <circle cx="42" cy="49" r="3" fill="#c6534b" />
+            <circle cx="58" cy="49" r="3" fill="#e8b832" />
+            <circle cx="43.5" cy="58.5" r="2.5" fill="#44bad7" />
+            <circle cx="56.5" cy="58.5" r="2.5" fill="#f0e097" />
+          </g>
+          <text x="85" y="62" font-family="'Open Sans', Arial, sans-serif" font-weight="bold" font-size="38"
+            fill="url(#grad2)" letter-spacing="2">
+            zingo.gg
+          </text>
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e995b6" />
+              <stop offset="100%" stop-color="#c6534b" />
+            </linearGradient>
+            <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e995b6" />
+              <stop offset="100%" stop-color="#c6534b" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+      </div>
+      <!-- <img src="game-controller-logo.png" alt="Logo" class="logo-img"> -->
       <div class="logo-text">
         <span>Online</span>
         <span>Gaming Website</span>
@@ -272,7 +300,35 @@
   <footer>
     <div class="footer-top">
       <div class="footer-logo">
-        <img src="game-controller-logo.png" alt="Logo" class="logo-img">
+        <div class=".logo-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 360 100">
+            <!-- Game Controller Icon -->
+            <g>
+              <ellipse cx="50" cy="50" rx="32" ry="32" fill="url(#grad1)" />
+              <rect x="31" y="40" width="38" height="18" rx="9" fill="#fbf4f4" stroke="#e995b6" stroke-width="2" />
+              <circle cx="42" cy="49" r="3" fill="#c6534b" />
+              <circle cx="58" cy="49" r="3" fill="#e8b832" />
+              <circle cx="43.5" cy="58.5" r="2.5" fill="#44bad7" />
+              <circle cx="56.5" cy="58.5" r="2.5" fill="#f0e097" />
+            </g>
+            <text x="85" y="62" font-family="'Open Sans', Arial, sans-serif" font-weight="bold" font-size="38"
+              fill="url(#grad2)" letter-spacing="2">
+              zingo.gg
+            </text>
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e995b6" />
+                <stop offset="100%" stop-color="#c6534b" />
+              </linearGradient>
+              <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#e995b6" />
+                <stop offset="100%" stop-color="#c6534b" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+        </div>
+        <!-- <img src="game-controller-logo.png" alt="Logo" class="logo-img"> -->
         <div class="logo-text">
           <span>Online</span>
           <span>Gaming Website</span>
@@ -883,6 +939,298 @@
           gameminiimage.src = 'https://upload.wikimedia.org/wikipedia/en/0/09/Candy_Crush_Saga_Logo.png';
 
           break;
+        case 'traffic-jam-3d':
+          gameName.innerText = "Traffic Jam 3D";
+          categorie.innerText = "Racing";
+          gameIframe.src = "https://zingo.gg/game/traffic-jam-3d/";
+          gameImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-PDRFohPHOd3aE9BsrtOkrSFi_ygCqbR3g&s"; // Update this path based on your image folder
+          title.innerText = "Play Traffic Jam 3D";
+          document.title = "Traffic Jam 3D";
+
+          gameDescription.innerText = `
+    Traffic Jam 3D is an adrenaline-pumping racing game where you weave through traffic at high speeds! 
+    Choose your vehicle, upgrade performance, and test your reflexes across busy highways. 
+    Dodge cars, complete missions, and become the ultimate road racer. Play now on desktop or mobile – no downloads needed!
+  `;
+
+          controls.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Traffic Jam 3D Controls</h3>
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+      <div>
+        <h4 style="color:#0099cc;">🖥️ PC</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Arrow Keys / WASD</b> – Steer and control the car</li>
+          <li><b>Shift</b> – Nitro Boost</li>
+          <li><b>Space</b> – Brake</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#33cc33;">📱 Mobile</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Tilt</b> – Steer the car</li>
+          <li><b>Touch Controls</b> – Accelerate, brake, and boost</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+          instruction.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Select a Mode</b> – Choose from Career, Endless, Time Trial, or Free Ride.</li>
+      <li><b>Dodge Traffic</b> – Drive through traffic without crashing.</li>
+      <li><b>Use Nitro</b> – Boost your speed with nitro at key moments.</li>
+      <li><b>Upgrade Cars</b> – Earn coins to upgrade speed, handling, and brakes.</li>
+      <li><b>Score Points</b> – Overtake cars closely and drive at high speed to earn points.</li>
+    </ul>
+  `;
+
+          achievements.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Speed Demon</b> – Reach top speed without crashing.</li>
+      <li><b>Thread the Needle</b> – Pass between two vehicles with minimal space.</li>
+      <li><b>Long Drive</b> – Drive over 10 km in Endless mode.</li>
+      <li><b>Perfect Overtake</b> – Overtake 5 vehicles in under 10 seconds.</li>
+      <li><b>Fully Upgraded</b> – Max out all car stats.</li>
+    </ul>
+  `;
+          break;
+        case 'indian-uphill-bus-simulator-3d':
+          gameName.innerText = "Indian Uphill Bus Simulator 3D";
+          categorie.innerText = "Simulation";
+          gameIframe.src = "https://zingo.gg/game/indian-uphill-bus-simulator-3d/index.html";
+          gameImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzGvuRh78dpMbh-mZ6HGdCZCI74ZoQqjsBCg&s"; // Replace with your own hosted image if needed
+          gameImage.alt = "Indian Uphill Bus Simulator 3D game thumbnail";
+          title.innerText = "Play Indian Uphill Bus Simulator 3D";
+          document.title = "Indian Uphill Bus Simulator 3D";
+
+          gameDescription.innerText = `
+    Experience the thrill of driving massive buses through narrow, winding mountain roads in Indian Uphill Bus Simulator 3D!
+    Master sharp turns, manage steep climbs, and safely transport passengers across stunning hilly terrain.
+    With realistic physics and beautiful visuals, it's a true test of your driving skills!
+  `;
+
+          controls.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Controls</h3>
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+      <div>
+        <h4 style="color:#0099cc;">🖥️ PC</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>WASD / Arrow Keys</b> – Drive and steer the bus</li>
+          <li><b>Space</b> – Handbrake</li>
+          <li><b>C</b> – Change camera view</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#33cc33;">📱 Mobile</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Touch Controls</b> – Steer, accelerate, and brake</li>
+          <li><b>Camera Button</b> – Switch view</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+          instruction.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Select a Route</b> – Choose your starting point and destination.</li>
+      <li><b>Pick Up Passengers</b> – Stop at marked locations to let passengers board.</li>
+      <li><b>Drive Carefully</b> – Avoid falling off cliffs or hitting obstacles.</li>
+      <li><b>Manage Fuel</b> – Keep an eye on the fuel level and refuel when needed.</li>
+      <li><b>Complete Missions</b> – Earn coins and unlock new buses.</li>
+    </ul>
+  `;
+
+          achievements.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Mountain Master</b> – Complete all levels without crashing.</li>
+      <li><b>Fuel Saver</b> – Finish a mission with over 80% fuel left.</li>
+      <li><b>Sharp Turner</b> – Make 10 perfect turns in one mission.</li>
+      <li><b>Bus Collector</b> – Unlock all available buses.</li>
+      <li><b>Scenic Route</b> – Take the longest available route and complete it successfully.</li>
+    </ul>
+  `;
+          break;
+        case 'bicycle-stunts-3d':
+          gameName.innerText = "Bicycle Stunts 3D";
+          categorie.innerText = "Sports";
+          gameIframe.src = "https://zingo.gg/game/bicycle-stunts-3d/index.html";
+          gameImage.src = "https://play-lh.googleusercontent.com/UOPYEbybhENEOtch88M7Vw4FxAY8syWAR9q-Fn57zIPj_0ik4pFybPqKR9mOxsKynE54=w526-h296-rw";
+          gameImage.alt = "Bicycle Stunts 3D game thumbnail";
+          title.innerText = "Play Bicycle Stunts 3D";
+          document.title = "Bicycle Stunts 3D";
+
+          gameDescription.innerText = `
+    Get ready for an epic ride in Bicycle Stunts 3D! Take control of your BMX bike and pull off mind-blowing stunts across challenging ramps, loops, and platforms.
+    Perfect your timing, balance, and tricks to become the ultimate stunt rider. Play for free, no downloads needed!
+  `;
+
+          controls.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Controls</h3>
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+      <div>
+        <h4 style="color:#0099cc;">🖥️ PC</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Arrow Keys / WASD</b> – Move and control the bike</li>
+          <li><b>Space</b> – Jump</li>
+          <li><b>Shift</b> – Perform stunt</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#33cc33;">📱 Mobile</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Touch Controls</b> – On-screen buttons to move and jump</li>
+          <li><b>Tilt</b> – Lean forward or backward for stunts</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+          instruction.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Choose a Level</b> – Select from various challenging stunt arenas.</li>
+      <li><b>Ride the Bike</b> – Maintain balance while riding on tricky tracks.</li>
+      <li><b>Perform Stunts</b> – Use ramps and obstacles to do flips and tricks.</li>
+      <li><b>Avoid Crashes</b> – Land smoothly or restart from checkpoints.</li>
+      <li><b>Beat Time Limits</b> – Complete stunts before time runs out to win.</li>
+    </ul>
+  `;
+
+          achievements.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Stunt King</b> – Land 10 perfect flips in a row.</li>
+      <li><b>Speed Demon</b> – Complete a level in under 30 seconds.</li>
+      <li><b>Air Time</b> – Stay in the air for 5+ seconds.</li>
+      <li><b>No Falls</b> – Finish 3 levels without crashing once.</li>
+      <li><b>All Clear</b> – Complete every level with 3 stars.</li>
+    </ul>
+  `;
+          break;
+        case 'furious-racing-3d':
+          gameName.innerText = "Furious Racing 3D";
+          categorie.innerText = "Racing";
+          gameIframe.src = "https://zingo.gg/game/furious-racing-3d/index.html";
+          gameImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0hbCvJQL8RHYCOCPR0WswWRnaBfSyPggldA&s";
+          gameImage.alt = "Furious Racing 3D game thumbnail";
+          title.innerText = "Play Furious Racing 3D";
+          document.title = "Furious Racing 3D";
+
+          gameDescription.innerText = `
+    Furious Racing 3D delivers non-stop action with high-speed races, stunning cars, and intense street challenges!
+    Burn rubber through city streets, dodge traffic, and unleash your inner racer in this adrenaline-fueled driving experience.
+    No downloads needed – jump into the race now!
+  `;
+
+          controls.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Controls</h3>
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+      <div>
+        <h4 style="color:#0099cc;">🖥️ PC</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>WASD / Arrow Keys</b> – Drive and steer</li>
+          <li><b>Shift</b> – Nitro Boost</li>
+          <li><b>Space</b> – Handbrake</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#33cc33;">📱 Mobile</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Touch Controls</b> – On-screen steering and acceleration</li>
+          <li><b>Nitro Button</b> – Activate speed boost</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+          instruction.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Choose Your Car</b> – Select your ride from a range of powerful vehicles.</li>
+      <li><b>Race Through Streets</b> – Beat your opponents and traffic on busy urban roads.</li>
+      <li><b>Use Nitro</b> – Hit the boost at the right moment for max speed.</li>
+      <li><b>Avoid Crashes</b> – Stay on the road and avoid obstacles.</li>
+      <li><b>Win & Upgrade</b> – Earn coins to unlock upgrades and new cars.</li>
+    </ul>
+  `;
+
+          achievements.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Speed Addict</b> – Maintain nitro boost for 10 seconds.</li>
+      <li><b>Clean Run</b> – Complete a race without any collisions.</li>
+      <li><b>Drift King</b> – Drift for over 5 seconds in one go.</li>
+      <li><b>Champion Racer</b> – Win 5 races in a row.</li>
+      <li><b>Car Collector</b> – Unlock all vehicles.</li>
+    </ul>
+  `;
+          break;
+          case 'kart-race-3d':
+  gameName.innerText = "Kart Race 3D";
+  categorie.innerText = "Racing";
+  gameIframe.src = "https://zingo.gg/game/kart-race-3d/index.html";
+  gameImage.src = "https://static.keygames.com/0/114640/100387/1024x1024/kart-race-3d.webp";
+  gameImage.alt = "Kart Race 3D game thumbnail";
+  title.innerText = "Play Kart Race 3D";
+  document.title = "Kart Race 3D";
+
+  gameDescription.innerText = `
+    Kart Race 3D is a fast-paced arcade-style kart racing game packed with wild tracks and power-ups!
+    Drift around corners, blast opponents with items, and race to victory. Easy to pick up, hard to master – are you ready to be the karting champ?
+  `;
+
+  controls.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🎮 Controls</h3>
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; font-family:sans-serif;">
+      <div>
+        <h4 style="color:#0099cc;">🖥️ PC</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Arrow Keys / WASD</b> – Steer the kart</li>
+          <li><b>Space</b> – Use power-up</li>
+          <li><b>Shift</b> – Drift boost</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#33cc33;">📱 Mobile</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><b>Touch Controls</b> – On-screen steering and boost buttons</li>
+          <li><b>Swipe</b> – Navigate and activate items</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+  instruction.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">📋 How to Play</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Select Your Kart</b> – Pick your favorite vehicle and customize it.</li>
+      <li><b>Race to Win</b> – Navigate tracks filled with jumps, twists, and hazards.</li>
+      <li><b>Collect Power-Ups</b> – Use weapons and boosts to gain advantage.</li>
+      <li><b>Drift for Boost</b> – Master drifting to get speed boosts around corners.</li>
+      <li><b>Climb the Ranks</b> – Win races and unlock new challenges.</li>
+    </ul>
+  `;
+
+  achievements.innerHTML = `
+    <h3 style="color:#ff6600; font-family:sans-serif;">🏅 Achievements</h3>
+    <ul style="list-style:none; padding:0; font-family:sans-serif;">
+      <li><b>Boost Master</b> – Trigger 5 boosts in one race.</li>
+      <li><b>Item Frenzy</b> – Use 10 power-ups successfully in a single race.</li>
+      <li><b>Flawless Driver</b> – Finish a race without hitting obstacles.</li>
+      <li><b>Champion Racer</b> – Win all tracks in the championship.</li>
+      <li><b>Kart Collector</b> – Unlock every kart in the game.</li>
+    </ul>
+  `;
+  break;
+
+
+
+
+
 
       }
 
