@@ -1,0 +1,12 @@
+{
+"companyName": "Snowcross Stunts X3M 1",
+"productName": "Snowcross Stunts X3M",
+"dataUrl": "snowcross_stunts_x3m_v7.data.unityweb",
+"wasmCodeUrl": "snowcross_stunts_x3m_v7.wasm.code.unityweb",
+"wasmFrameworkUrl": "snowcross_stunts_x3m_v7.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
