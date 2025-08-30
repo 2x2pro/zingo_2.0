@@ -1,716 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Games</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Play 1000+ free online games at Zingo.gg! Enjoy adventure, puzzle, racing, action games and more. No downloads required - play instantly in your browser!">
+    <meta name="keywords" content="free online games, browser games, adventure games, puzzle games, racing games, action games, multiplayer games">
+    <meta name="author" content="Zingo.gg">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zingo.gg/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zingo.gg - Play Free Online Games | 1000+ Fun Browser Games">
+    <meta property="og:description" content="Play 1000+ free online games at Zingo.gg! Enjoy adventure, puzzle, racing, action games and more. No downloads required - play instantly in your browser!">
+    <meta property="og:image" content="https://zingo.gg/game-controller-logo.png">
+    <meta property="og:url" content="https://zingo.gg/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zingo.gg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zingo.gg - Play Free Online Games">
+    <meta name="twitter:description" content="Play 1000+ free online games at Zingo.gg! Adventure, puzzle, racing, action games and more.">
+    <meta name="twitter:image" content="https://zingo.gg/game-controller-logo.png">
+    
+    <title>Zingo.gg - Play Free Online Games | 1000+ Fun Browser Games</title>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN1ZJQ0EE2"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1824384824585623"
-        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1824384824585623" crossorigin="anonymous"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-KN1ZJQ0EE2');
+        gtag('event', 'page_view', {
+            page_title: 'Zingo.gg - Free Online Games',
+            page_location: window.location.href
+        });
     </script>
 
+    <!-- Preconnect to improve font loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles-modern.css" as="style">
+    <link rel="preload" href="games-data.js" as="script">
+    <link rel="preload" href="iframe-loader.js" as="script">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="game-controller-logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="game-controller-logo.png">
+    <meta name="theme-color" content="#6366f1">
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Zingo.gg",
+        "url": "https://zingo.gg",
+        "description": "Play 1000+ free online games at Zingo.gg! Adventure, puzzle, racing, action games and more. No downloads required.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zingo.gg/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zingo.gg",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://zingo.gg/game-controller-logo.png"
+            }
+        }
+    }
+    </script>
 
-
+    <link rel="stylesheet" href="styles-modern.css">
 </head>
 
-<body>
-    <header>
-        <div class="logo-container">
-            <div class=".logo-img">
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="70" viewBox="0 0 360 100">
-                        <!-- Game Controller Icon -->
-                        <g>
-                            <ellipse cx="50" cy="50" rx="32" ry="32" fill="url(#grad1)" />
-                            <rect x="31" y="40" width="38" height="18" rx="9" fill="#fbf4f4" stroke="#e995b6"
-                                stroke-width="2" />
-                            <circle cx="42" cy="49" r="3" fill="#c6534b" />
-                            <circle cx="58" cy="49" r="3" fill="#e8b832" />
-                            <circle cx="43.5" cy="58.5" r="2.5" fill="#44bad7" />
-                            <circle cx="56.5" cy="58.5" r="2.5" fill="#f0e097" />
-                        </g>
-                        <text x="85" y="62" font-family="'Open Sans', Arial, sans-serif" font-weight="bold"
-                            font-size="38" fill="url(#grad2)" letter-spacing="2">
-                            zingo.gg
-                        </text>
-                        <defs>
-                            <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#e995b6" />
-                                <stop offset="100%" stop-color="#c6534b" />
-                            </linearGradient>
-                            <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#e995b6" />
-                                <stop offset="100%" stop-color="#c6534b" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+<body class="modern-theme">
+    <!-- Modern Header -->
+    <header class="modern-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40">
+                            <circle cx="20" cy="20" r="18" fill="url(#logoGrad)"/>
+                            <rect x="10" y="15" width="20" height="10" rx="5" fill="white"/>
+                            <circle cx="15" cy="20" r="2" fill="#6366f1"/>
+                            <circle cx="25" cy="20" r="2" fill="#f59e0b"/>
+                            <defs>
+                                <linearGradient id="logoGrad">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Zingo</span>
                 </a>
-
-
             </div>
-
-            <!-- <div class="logo-text">
-                <span>Online</span>
-                <span>Gaming Website</span>
-            </div> -->
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Disclaimer</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
+            
+            <div class="search-header">
+                <form class="search-form" role="search">
+                    <div class="search-input-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="search" placeholder="Search 1000+ games..." class="search-input" id="header-search">
+                    </div>
+                </form>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">New Games</a>
+                <a href="#" class="nav-link">Popular</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content" id="home">
-                <h1>PLAY ONLINE GAMES !</h1>
-                <h2>A Small Small Games That Makes Your Day Enjoyable !</h2>
-
-                <div class="search-container">
-                    <h3>Search Game</h3>
-                    <div class="search-box">
-                        <input type="text" placeholder="Search here...">
-                        <button type="submit"><i class="fas fa-search"></i></button>
+        <!-- Hero Banner -->
+        <section class="hero-banner" role="banner">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Play 1000+ Free Games</h1>
+                    <p class="hero-subtitle">No downloads, no ads interruptions. Just pure gaming fun!</p>
+                    <div class="hero-stats">
+                        <span class="stat"><strong>1000+</strong> Games</span>
+                        <span class="stat"><strong>10M+</strong> Players</span>
+                        <span class="stat"><strong>100%</strong> Free</span>
                     </div>
                 </div>
             </div>
-            <div class="social-sidebar">
-                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon reddit"><i class="fas fa-reddit-alien"></i></a>
-                <a href="#" class="social-icon hide-button"><i class="fas fa-chevron-left"></i></a>
-            </div>
         </section>
 
-
-
-        <section class="most-played">
-            <h2>Most Played Games</h2>
-            <div class="games-slider">
-                <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
-                <div class="games-container">
-
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='temple'>
-
-                            <img src="https://i.pinimg.com/736x/07/ef/10/07ef10c982b089babd27eb19228264e5.jpg"
-                                alt="temple-run-2">
-                            <div class="game-category">Adventure </div>
-                            <h3>Play Temple run 2 </h3>
-                        </a>
-
+        <!-- Category Navigation -->
+        <nav class="category-nav" aria-label="Game categories">
+            <div class="container">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">
+                        <i class="fas fa-fire"></i>
+                        <span>Popular</span>
+                    </button>
+                    <button class="category-tab" data-category="adventure">
+                        <i class="fas fa-compass"></i>
+                        <span>Adventure</span>
+                    </button>
+                    <button class="category-tab" data-category="puzzle">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Puzzle</span>
+                    </button>
+                    <button class="category-tab" data-category="racing">
+                        <i class="fas fa-car"></i>
+                        <span>Racing</span>
+                    </button>
+                    <button class="category-tab" data-category="action">
+                        <i class="fas fa-rocket"></i>
+                        <span>Action</span>
+                    </button>
+                    <button class="category-tab" data-category="strategy">
+                        <i class="fas fa-chess"></i>
+                        <span>Strategy</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Games Section -->
+        <section class="games-section" role="region" aria-labelledby="games-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="games-heading">Popular Games</h2>
+                    <a href="#" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="games-grid" id="dynamic-games-grid">
+                    <!-- Games will be loaded dynamically from iframes.txt -->
+                    <div class="loading-placeholder">
+                        <div class="loading-spinner"></div>
+                        <p>Loading amazing games...</p>
                     </div>
-
-
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='guess'>
-
-                            <img src="games/random number/guess.jpeg" alt="temple-run-2">
-                            <div class="game-category">Puzzle</div>
-                            <h3>Play Guess the Number </h3>
-                        </a>
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='subway'>
-
-                            <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2018/11/5bffa628baff0.png"
-                                alt="temple-run-2">
-                            <div class="game-category">Strategy</div>
-                            <h3>Play Subway Suffer</h3>
-                        </a>
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='archer'>
-
-                            <img src="https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6"
-                                alt="temple-run-2">
-                            <div class="game-category">Action</div>
-                            <h3>Play Archer Hero</h3>
-                        </a>
-
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='love'>
-
-                            <img src="lovebubbles200.webp" width="620px" alt="temple-run-2">
-                            <div class="game-category">strategy</div>
-                            <h3>Play Love Bubble</h3>
-                        </a>
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='angrybird'>
-
-                            <img src="images.jpeg" width="620px" alt="temple-run-2">
-                            <div class="game-category">Adeventure</div>
-                            <h3>Angry Bird</h3>
-                        </a>
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='amongus'>
-
-                            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg"
-                                alt="temple-run-2">
-                            <div class="game-category">Adeventure</div>
-                            <h3>Among Us</h3>
-                        </a>
-
-                    </div>
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='candycrush'>
-
-                            <img src="Candy.png" width="600px" alt="temple-run-2">
-                            <div class="game-category">puzzle</div>
-                            <h3>Candy Crush</h3>
-                        </a>
-
-                    </div>
-
-
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='traffic-jam-3d'>
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-PDRFohPHOd3aE9BsrtOkrSFi_ygCqbR3g&s"
-                                width="600px" alt="traffic-jam-3d">
-                            <div class="game-category">Action</div>
-                            <h3>play traffic-jam-3d</h3>
-                        </a>
-
-                    </div>
-                    <!-- <div class="gamecard" data-name="traffic jam 3d racing">
-                        <a href="game.html" class="game-card" data-game-id='indian-uphill-bus-simulator-3d'>
-
-                            <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzGvuRh78dpMbh-mZ6HGdCZCI74ZoQqjsBCg&s">
-                            <div class="game-category">Action</div>
-                            <h3>play traffic-jam-3d</h3>
-                        </a>
-
-                    </div> -->
-
-                    <div class="gamecard" data-name="traffic jam 3d racing">
-                        <a href="game.html" class="game-card" data-game-id="bicycle-stunts-3d">
-                            <img src="https://play-lh.googleusercontent.com/UOPYEbybhENEOtch88M7Vw4FxAY8syWAR9q-Fn57zIPj_0ik4pFybPqKR9mOxsKynE54=w526-h296-rw"
-                                alt="Bicycle Stunts 3D">
-                            <div class="game-category">Sports</div>
-                            <h3>Play Bicycle Stunts 3D</h3>
-                        </a>
-                    </div>
-
-                    <div class="gamecard" data-name="traffic jam 3d racing">
-                        <a href="game.html" class="game-card" data-game-id="furious-racing-3d">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0hbCvJQL8RHYCOCPR0WswWRnaBfSyPggldA&s"
-                                alt="Furious Racing 3D">
-                            <div class="game-category">Racing</div>
-                            <h3>Play Furious Racing 3D</h3>
-                        </a>
-                    </div>
-
-                    <div class="gamecard" data-name="traffic jam 3d racing">
-                        <a href="game.html" class="game-card" data-game-id="kart-race-3d">
-                            <img src="https://static.keygames.com/0/114640/100387/1024x1024/kart-race-3d.webp"
-                                alt="Kart Race 3D">
-                            <div class="game-category">Racing</div>
-                            <h3>Play Kart Race 3D</h3>
-                        </a>
-                    </div>
-
-                    <div class="gamecard" data-name="NeedForSpeed">
-                        <a href="game.html" class="game-card" data-game-id="NeedForSpeed">
-                            <img src="needforspeed.avif" alt="need for speed ">
-                            <div class="game-category">Racing</div>
-                            <h3>Play Need for Speed </h3>
-                        </a>
-                    </div>
-
-                    <div class="gamecard">
-                        <a href="game.html" class="game-card" data-game-id='mix-match'>
-
-                            <img src="games/mix&match/img/halloween.jpg" alt="temple-run-2">
-                            <div class="game-category">Strategy</div>
-                            <h3>Play Mix & Match </h3>
-                        </a>
-
-                    </div>
-
-
-
                 </div>
 
-
-
-                <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
-
-
-
-
-            </div>
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <!-- Load More Button -->
+                <div class="load-more-section" id="load-more-section" style="display: none;">
+                    <button class="load-more-btn" id="load-more-btn">
+                        <i class="fas fa-plus"></i>
+                        Load More Games
+                    </button>
+                </div>
             </div>
         </section>
-
-        <!-- <section class="categories">
-            <h2>Browse Categories</h2>
-            <div class="category-grid">
-                <a href="#" class="category-card">
-                    <div class="category-icon"><i class="fas fa-gamepad"></i></div>
-                    <h3>Action</h3>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon"><i class="fas fa-mountain"></i></div>
-                    <h3>Adventure</h3>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon"><i class="fas fa-puzzle-piece"></i></div>
-                    <h3>Logic & Puzzle</h3>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon"><i class="fas fa-running"></i></div>
-                    <h3>Sports</h3>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon"><i class="fas fa-chess"></i></div>
-                    <h3>Strategy</h3>
-                </a>
-            </div>
-        </section> -->
-
-        <!-- <section class="ad-section">
-            <div class="ad-banner">
-                <div class="ad-text">AD PLACEMENT</div>
-            </div>
-        </section> -->
-
-        <section class="categories">
-
-            <h2>Browse Categories</h2>
-            <div class="category-grid">
-                <a href="#" class="category-card" data-category="all">
-                    <div class="category-icon"><i class="fas fa-th-list"></i></div>
-                    <h3>All Games</h3>
-                </a>
-                <a href="#" class="category-card" data-category="action">
-                    <div class="category-icon"><i class="fas fa-gamepad"></i></div>
-                    <h3>Action</h3>
-                </a>
-                <a href="#" class="category-card" data-category="adventure">
-                    <div class="category-icon"><i class="fas fa-mountain"></i></div>
-                    <h3>Adventure</h3>
-                </a>
-                <a href="#" class="category-card" data-category="puzzle">
-                    <div class="category-icon"><i class="fas fa-puzzle-piece"></i></div>
-                    <h3>Puzzle</h3>
-                </a>
-                <a href="#" class="category-card" data-category="strategy">
-                    <div class="category-icon"><i class="fas fa-chess"></i></div>
-                    <h3>Strategy</h3>
-                </a>
-                <a href="#" class="category-card" data-category="sports">
-                    <div class="category-icon"><i class="fas fa-running"></i></div>
-                    <h3>Sports</h3>
-                </a>
-                <a href="#" class="category-card" data-category="racing">
-                    <div class="category-icon"><i class="fas fa-car"></i></div>
-                    <h3>Racing</h3>
-                </a>
-            </div>
-        </section>
-
-
-        <div class="games-slider">
-            <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
-            <div class="games-container">
-
-                <section class="games-container">
-
-                    <div class="games-slider">
-                        <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
-                        <div class="games-container">
-                            <!-- Adventure Games -->
-                            <div class="gamecard" data-category="adventure">
-                                <a href="game.html" class="game-card" data-game-id='temple'>
-                                    <img src="https://i.pinimg.com/736x/07/ef/10/07ef10c982b089babd27eb19228264e5.jpg"
-                                        alt="temple-run-2">
-                                    <div class="game-category">Adventure</div>
-                                    <h3>Play Temple run 2</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="adventure">
-                                <a href="game.html" class="game-card" data-game-id='angrybird'>
-                                    <img src="images.jpeg" width="620px" alt="Angry Bird">
-                                    <div class="game-category">Adventure</div>
-                                    <h3>Angry Bird</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="adventure">
-                                <a href="game.html" class="game-card" data-game-id='amongus'>
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg"
-                                        alt="Among Us">
-                                    <div class="game-category">Adventure</div>
-                                    <h3>Among Us</h3>
-                                </a>
-                            </div>
-
-                            <!-- Puzzle Games -->
-                            <div class="gamecard" data-category="puzzle">
-                                <a href="game.html" class="game-card" data-game-id='guess'>
-                                    <img src="games/random number/guess.jpeg" alt="Guess the Number">
-                                    <div class="game-category">Puzzle</div>
-                                    <h3>Play Guess the Number</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="puzzle">
-                                <a href="game.html" class="game-card" data-game-id='candycrush'>
-                                    <img src="Candy.png" width="600px" alt="Candy Crush">
-                                    <div class="game-category">Puzzle</div>
-                                    <h3>Candy Crush</h3>
-                                </a>
-                            </div>
-
-                            <!-- Strategy Games -->
-                            <div class="gamecard" data-category="strategy">
-                                <a href="game.html" class="game-card" data-game-id='subway'>
-                                    <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2018/11/5bffa628baff0.png"
-                                        alt="Subway Surfers">
-                                    <div class="game-category">Strategy</div>
-                                    <h3>Play Subway Surfers</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="strategy">
-                                <a href="game.html" class="game-card" data-game-id='love'>
-                                    <img src="lovebubbles200.webp" width="620px" alt="Love Bubble">
-                                    <div class="game-category">Strategy</div>
-                                    <h3>Play Love Bubble</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="strategy">
-                                <a href="game.html" class="game-card" data-game-id='mix-match'>
-                                    <img src="games/mix&match/img/halloween.jpg" alt="Mix & Match">
-                                    <div class="game-category">Strategy</div>
-                                    <h3>Play Mix & Match</h3>
-                                </a>
-                            </div>
-
-                            <!-- Action Games -->
-                            <div class="gamecard" data-category="action">
-                                <a href="game.html" class="game-card" data-game-id='archer'>
-                                    <img src="https://play-lh.googleusercontent.com/Xgr4WCjbAKPEVUjtNOoPQpCvkW8US3Lk4pgg1gN7pRapscQ_8Xrc6-uakEYQPd6gQZ_6"
-                                        alt="Archer Hero">
-                                    <div class="game-category">Action</div>
-                                    <h3>Play Archer Hero</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="action">
-                                <a href="game.html" class="game-card" data-game-id="miami-crime">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkcv1wqI0aSR0MuDRvOk_ZEngcZ9qf2r_7Eg&s"
-                                        alt="Miami Crime Simulator 3D">
-                                    <div class="game-category">Action</div>
-                                    <h3>Play Miami Crime Simulator 3D</h3>
-                                </a>
-                            </div>
-
-
-                            <!-- Racing Games -->
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id='traffic-jam-3d'>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-PDRFohPHOd3aE9BsrtOkrSFi_ygCqbR3g&s"
-                                        width="600px" alt="Traffic Jam 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Traffic Jam 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id='indian-uphill-bus-simulator-3d'>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzGvuRh78dpMbh-mZ6HGdCZCI74ZoQqjsBCg&s"
-                                        alt="Indian Uphill Bus Simulator 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Indian Uphill Bus Simulator 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id="bicycle-stunts-3d">
-                                    <img src="https://play-lh.googleusercontent.com/UOPYEbybhENEOtch88M7Vw4FxAY8syWAR9q-Fn57zIPj_0ik4pFybPqKR9mOxsKynE54=w526-h296-rw"
-                                        alt="Bicycle Stunts 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Bicycle Stunts 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id="furious-racing-3d">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0hbCvJQL8RHYCOCPR0WswWRnaBfSyPggldA&s"
-                                        alt="Furious Racing 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Furious Racing 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id="kart-race-3d">
-                                    <img src="https://static.keygames.com/0/114640/100387/1024x1024/kart-race-3d.webp"
-                                        alt="Kart Race 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Kart Race 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html" class="game-card" data-game-id="NeedForSpeed">
-                                    <img src="needforspeed.avif" alt="Need for Speed">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Need for Speed</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard">
-                                <a href="game.html" class="game-card" data-game-id="indian-bus">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOBJtvDznfBQ4HU4jP9rej7jLKPMnzSQf4cQ&s"
-                                        alt="Indian Uphill Bus Simulator 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Indian Uphill Bus Simulator 3D</h3>
-                                </a>
-                            </div>
-
-                            <!-- <div class="gamecard">
-                <a href="game.html" class="game-card" data-game-id='temple'>
-
-                    <img src="https://i.pinimg.com/736x/07/ef/10/07ef10c982b089babd27eb19228264e5.jpg"
-                        alt="temple-run-2">
-                    <div class="game-category">Adventure </div>
-                    <h3>Play Temple run 2 </h3>
-                </a>
-
-            </div> -->
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html?id=indian-truck" class="game-card">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28Pcsy6nxPPCbjSntSxSYTEGJ2M-6zXzwyVWZL_A_YDJdySv6ShfP7KttLNRkgA74G9I&usqp=CAU"
-                                        alt="Indian Truck Simulator 3D">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Indian Truck Simulator 3D</h3>
-                                </a>
-                            </div>
-
-                            <div class="gamecard" data-category="racing">
-                                <a href="game.html?id=mega-ramp" class="game-card">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh80IgcO98MjtVAm0scGyX0hlfnuYr-5XULA&s"
-                                        alt="Mega Ramp Car Stunts">
-                                    <div class="game-category">Racing</div>
-                                    <h3>Play Mega Ramp Car Stunts</h3>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </section>
     </main>
 
-    <footer>
-        <div class="footer-top">
-            <div class="footer-logo">
-                <div class=".logo-img">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="70" viewBox="0 0 360 100">
-                        <!-- Game Controller Icon -->
-                        <g>
-                            <ellipse cx="50" cy="50" rx="32" ry="32" fill="url(#grad1)" />
-                            <rect x="31" y="40" width="38" height="18" rx="9" fill="#fbf4f4" stroke="#e995b6"
-                                stroke-width="2" />
-                            <circle cx="42" cy="49" r="3" fill="#c6534b" />
-                            <circle cx="58" cy="49" r="3" fill="#e8b832" />
-                            <circle cx="43.5" cy="58.5" r="2.5" fill="#44bad7" />
-                            <circle cx="56.5" cy="58.5" r="2.5" fill="#f0e097" />
-                        </g>
-                        <text x="85" y="62" font-family="'Open Sans', Arial, sans-serif" font-weight="bold"
-                            font-size="38" fill="url(#grad2)" letter-spacing="2">
-                            zingo.gg
-                        </text>
-                        <defs>
-                            <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#e995b6" />
-                                <stop offset="100%" stop-color="#c6534b" />
-                            </linearGradient>
-                            <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#e995b6" />
-                                <stop offset="100%" stop-color="#c6534b" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" fill="url(#footerLogoGrad)"/>
+                                <rect x="10" y="15" width="20" height="10" rx="5" fill="white"/>
+                                <circle cx="15" cy="20" r="2" fill="#6366f1"/>
+                                <circle cx="25" cy="20" r="2" fill="#f59e0b"/>
+                                <defs>
+                                    <linearGradient id="footerLogoGrad">
+                                        <stop offset="0%" stop-color="#6366f1"/>
+                                        <stop offset="100%" stop-color="#8b5cf6"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span>Zingo</span>
+                    </div>
+                    <p class="footer-description">
+                        Play 1000+ free online games instantly. No downloads, no registration required.
+                        Just pure gaming fun!
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
 
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Adventure Games</a></li>
+                        <li><a href="#">Puzzle Games</a></li>
+                        <li><a href="#">Racing Games</a></li>
+                        <li><a href="#">Action Games</a></li>
+                        <li><a href="#">Strategy Games</a></li>
+                    </ul>
                 </div>
-                <!-- <div class="logo-text">
-                    <span>Online</span>
-                    <span>Gaming Website</span>
-                </div> -->
-            </div>
-            <p class="footer-description">
-                Welcome to our online gaming hub, where the excitement never stops! Dive into a world of endless fun
-                with over 1000 free online games ready for you to play. Whether you're a casual gamer or a dedicated
-                enthusiast, our diverse collection offers a thrilling array of choices. Join us and explore the joy of
-                gaming without any cost - it's all about play, enjoyment, and a community that shares the passion for
-                online gaming!
-            </p>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-category">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Strategy</a></li>
-                    <li><a href="#">Puzzle & Logic</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h3>Other Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Follow On</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+
+                <div class="footer-section">
+                    <h4>Popular</h4>
+                    <ul>
+                        <li><a href="#">New Games</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                        <li><a href="#">Most Played</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Featured</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-stats">
+                    <span><strong>1000+</strong> Games</span>
+                    <span><strong>10M+</strong> Players</span>
+                    <span><strong>100%</strong> Free</span>
+                </div>
+                <p>&copy; 2024 Zingo.gg. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="games-data.js"></script>
+    <script src="iframe-loader.js"></script>
+    <script src="image-loader.js"></script>
+    <script src="script-modern.js"></script>
+    
     <script>
-        // Paste the search functionality code here
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchInput = document.querySelector('.search-box input');
-            const gameCards = document.querySelectorAll('.gamecard');
-
-            searchInput.addEventListener('input', function () {
-                const searchTerm = this.value.toLowerCase().trim();
-
-                gameCards.forEach(card => {
-                    const gameTitle = card.querySelector('h3').textContent.toLowerCase();
-                    const gameCategory = card.querySelector('.game-category').textContent.toLowerCase();
-                    const gameId = card.querySelector('a').getAttribute('data-game-id').toLowerCase();
-
-                    if (!searchTerm ||
-                        gameTitle.includes(searchTerm) ||
-                        gameCategory.includes(searchTerm) ||
-                        gameId.includes(searchTerm)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+        // Initialize dynamic games system on homepage
+        let gameLoader = null;
+        let imageLoader = null;
+        let displayedGames = 0;
+        const GAMES_PER_PAGE = 12;
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                // Initialize loaders
+                gameLoader = new IframeGameLoader();
+                imageLoader = new ImageLoader();
+                
+                // Load games data
+                await gameLoader.loadIframes();
+                
+                // Update game count in hero section
+                const totalGames = gameLoader.getAllGames().length;
+                updateGameCount(totalGames);
+                
+                // Display first batch of games
+                displayGames();
+                
+            } catch (error) {
+                console.error('Error initializing dynamic games:', error);
+                showErrorMessage();
+            }
         });
-    </script>
-
-
-    <script>
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const categoryCards = document.querySelectorAll('.category-card');
-            const gameCards = document.querySelectorAll('.gamecard');
-
-            // Set default active category
-            document.querySelector('.category-card[data-category="all"]').classList.add('active');
-
-            // Category click handler
-            categoryCards.forEach(card => {
-                card.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    // Remove active class from all category cards
-                    categoryCards.forEach(c => c.classList.remove('active'));
-
-                    // Add active class to clicked card
-                    this.classList.add('active');
-
-                    const selectedCategory = this.dataset.category;
-
-                    // Filter games
-                    gameCards.forEach(game => {
-                        if (selectedCategory === 'all' || game.dataset.category === selectedCategory) {
-                            game.style.display = 'block';
-                        } else {
-                            game.style.display = 'none';
+        
+        function updateGameCount(count) {
+            const heroStats = document.querySelectorAll('.hero-stats .stat');
+            if (heroStats[0]) {
+                heroStats[0].innerHTML = `<strong>${count}+</strong> Games`;
+            }
+            const footerStats = document.querySelectorAll('.footer-stats span');
+            if (footerStats[0]) {
+                footerStats[0].innerHTML = `<strong>${count}+</strong> Games`;
+            }
+        }
+        
+        function displayGames() {
+            const gamesGrid = document.getElementById('dynamic-games-grid');
+            const allGames = gameLoader.getAllGames();
+            const loadMoreSection = document.getElementById('load-more-section');
+            
+            if (displayedGames === 0) {
+                gamesGrid.innerHTML = '';
+            }
+            
+            const gamesToShow = allGames.slice(displayedGames, displayedGames + GAMES_PER_PAGE);
+            
+            gamesToShow.forEach(game => {
+                const gameCard = createGameCard(game);
+                gamesGrid.appendChild(gameCard);
+            });
+            
+            displayedGames += gamesToShow.length;
+            
+            // Show/hide load more button
+            if (displayedGames < allGames.length) {
+                loadMoreSection.style.display = 'block';
+            } else {
+                loadMoreSection.style.display = 'none';
+            }
+        }
+        
+        function createGameCard(game) {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
+            gameCard.setAttribute('data-category', game.category.toLowerCase());
+            
+            gameCard.innerHTML = `
+                <a href="game.html?game=${game.id}" class="card-link">
+                    <div class="game-image">
+                        <img src="" alt="${game.title} - ${game.category} game" loading="lazy">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="game-category-badge">${game.category}</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">${game.title}</h3>
+                        <div class="game-meta">
+                            <span class="rating">
+                                <i class="fas fa-star"></i> ${generateRating()}
+                            </span>
+                            <span class="plays">${generatePlayCount()} plays</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+            
+            // Load game image with fallbacks
+            const imgElement = gameCard.querySelector('img');
+            const imageSources = gameLoader.getImageSources(
+                game.title, 
+                game.category, 
+                game.gameUrl, 
+                game.id
+            );
+            
+            imageLoader.loadImageWithFallbacks(imageSources, imgElement, `${game.title} game`);
+            
+            return gameCard;
+        }
+        
+        function generateRating() {
+            return (3.8 + Math.random() * 1.2).toFixed(1);
+        }
+        
+        function generatePlayCount() {
+            const counts = ['230', '450', '680', '1.2K', '1.8K', '2.3K', '3.1K', '4.5K'];
+            return counts[Math.floor(Math.random() * counts.length)];
+        }
+        
+        // Lazy load images for better performance
+        function lazyLoadImages() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                                observer.unobserve(img);
+                            }
                         }
                     });
                 });
-            });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        }
+        
+        function showErrorMessage() {
+            const gamesGrid = document.getElementById('dynamic-games-grid');
+            gamesGrid.innerHTML = `
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Unable to load games. Please try refreshing the page.</p>
+                </div>
+            `;
+        }
+        
+        // Load more button event
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('#load-more-btn')) {
+                displayGames();
+            }
         });
-
-
-
-
-
-
-        const gameCards = document.querySelectorAll('.game-card');
-        gameCards.forEach(card => {
-            card.addEventListener('click', function (e) {
-                e.preventDefault();
-                const gameId = this.getAttribute('data-game-id');
-                window.location.href = `game.html?game=${gameId}`;
-            });
+        
+        // Category filter functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.category-tab')) {
+                const categoryBtn = e.target.closest('.category-tab');
+                const category = categoryBtn.getAttribute('data-category');
+                
+                // Update active tab
+                document.querySelectorAll('.category-tab').forEach(tab => tab.classList.remove('active'));
+                categoryBtn.classList.add('active');
+                
+                // Filter games
+                filterGamesByCategory(category);
+            }
         });
+        
+        function filterGamesByCategory(category) {
+            const gameCards = document.querySelectorAll('.game-card');
+            const sectionHeader = document.getElementById('games-heading');
+            
+            gameCards.forEach(card => {
+                const gameCategory = card.getAttribute('data-category');
+                if (category === 'all' || gameCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update section title
+            const categoryNames = {
+                'all': 'Popular Games',
+                'adventure': 'Adventure Games',
+                'puzzle': 'Puzzle Games', 
+                'racing': 'Racing Games',
+                'action': 'Action Games',
+                'strategy': 'Strategy Games'
+            };
+            
+            sectionHeader.textContent = categoryNames[category] || 'Games';
+        }
     </script>
-
-
-
-    <script src="script.js"></script>
-    <script src="slider.js"></script>
 </body>
-
 </html>

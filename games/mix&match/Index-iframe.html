@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix & Match Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- iframe compatibility fixes -->
+    <style>
+        /* Ensure game works properly in iframe */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        /* Make game container fill iframe */
+        .game-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background: #2c1810;
+        }
+        
+        /* Fix for iframe display */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        
+        /* Auto-start the game in iframe */
+        .auto-start-message {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body class="halloween">
+    <div class="game-container">
+        <div class="auto-start-message" id="autoStartMsg">
+            🎮 Mix & Match Game - Click anywhere to start!
+        </div>
+        
+        <div id="theme-selector" style="display: none;">
+            <h2>Choose a theme:</h2>
+            <button onclick="selectTheme('halloween')" onmouseover="previewTheme('halloween')" onmouseout="clearPreview()">Halloween</button>
+            <button onclick="selectTheme('barbie')" onmouseover="previewTheme('barbie')" onmouseout="clearPreview()">Barbie</button>
+            <button onclick="selectTheme('cars')" onmouseover="previewTheme('cars')" onmouseout="clearPreview()">Cars</button>
+        </div>
+
+        <header>
+            <div class="timer">30</div>
+        </header>
+
+        <button id="start-button">Start Game</button>
+        <button id="back-button" style="display: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="game">
+            <!-- Cards will be dynamically added here -->
+        </div>
+
+        <div id="splash-screen">
+            <div class="splash-card">
+                <img id="splash-img" src="img/splash/MMT.png" alt="Mix & Match the Ghost" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // iframe compatibility modifications
+        console.log('🎮 Mix & Match Game - iframe version loading...');
+        
+        // Check if we're in an iframe
+        function isInIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+        
+        // Auto-start functionality for iframe
+        function autoStartGame() {
+            const autoStartMsg = document.getElementById('autoStartMsg');
+            const startButton = document.getElementById('start-button');
+            
+            if (isInIframe()) {
+                console.log('🖼️ Game is running in iframe - enabling auto-start');
+                
+                // Show the start button immediately
+                startButton.style.display = 'block';
+                
+                // Auto-hide splash screen and start game after click anywhere
+                document.addEventListener('click', function() {
+                    if (autoStartMsg) {
+                        autoStartMsg.style.display = 'none';
+                    }
+                    
+                    // Trigger game start
+                    const splashScreen = document.getElementById('splash-screen');
+                    if (splashScreen) {
+                        splashScreen.style.display = 'none';
+                    }
+                    
+                    // Start the game
+                    if (typeof startGame === 'function') {
+                        startGame();
+                    } else if (startButton) {
+                        startButton.click();
+                    }
+                }, { once: true });
+                
+                // Auto-start after 3 seconds if no interaction
+                setTimeout(() => {
+                    if (autoStartMsg && autoStartMsg.style.display !== 'none') {
+                        document.click();
+                    }
+                }, 3000);
+            } else {
+                console.log('🌐 Game is running standalone');
+                if (autoStartMsg) {
+                    autoStartMsg.style.display = 'none';
+                }
+            }
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('load', autoStartGame);
+    </script>
+    
+    <!-- Original game script -->
+    <script src="game.js"></script>
+    
+    <script>
+        // Additional iframe compatibility fixes
+        window.addEventListener('load', function() {
+            // Override any document.body manipulations to prevent iframe issues
+            const originalBodyStyle = document.body.style.backgroundImage;
+            
+            // Wrap theme functions to prevent iframe conflicts
+            if (typeof applyBackground === 'function') {
+                const originalApplyBackground = applyBackground;
+                window.applyBackground = function(theme) {
+                    try {
+                        originalApplyBackground(theme);
+                    } catch (error) {
+                        console.log('Background application failed (iframe context):', error);
+                        // Fallback: apply background to game container instead
+                        const gameContainer = document.querySelector('.game-container');
+                        if (gameContainer && themes && themes[theme]) {
+                            gameContainer.style.backgroundImage = themes[theme].background;
+                        }
+                    }
+                };
+            }
+            
+            console.log('✅ iframe compatibility fixes applied');
+        });
+    </script>
+</body>
+</html>
